@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cidadania Italiana – Correia Quintella</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <span>Correia Quintella</span>
+    <span>Assessoria & Consultoria de Cidadanias</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#cidadania">Cidadania</a></li>
+    <li><a href="index.html#acompanhamento">Acompanhamento</a></li>
+    <li><a href="index.html#contato" class="nav-cta">Fale Conosco</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html"              onclick="closeMobile()">Home</a>
+  <a href="index.html#cidadania"    onclick="closeMobile()">Cidadania</a>
+  <a href="index.html#acompanhamento" onclick="closeMobile()">Acompanhamento</a>
+  <a href="index.html#contato"      onclick="closeMobile()">Fale Conosco</a>
+</div>
+
+
+<!-- ═══ HERO ════════════════════════════════════════════════ -->
+<section class="cp-hero">
+  <div class="cp-hero-bg"></div>
+  <div class="cp-hero-content">
+
+    <a href="index.html#cidadania" class="cp-back">← Todas as cidadanias</a>
+
+    <p class="cp-eyebrow">
+      <span class="cp-flag">🇮🇹</span>
+      Assessoria Especializada
+    </p>
+
+    <h1 class="cp-title">Cidadania<br>Italiana</h1>
+
+    <p class="cp-subtitle">
+      Reconhecemos seu direito à cidadania italiana por descendência,
+      via processo judicial ou consular, sem limite de gerações.
+    </p>
+
+    <div class="cp-hero-stats">
+      <div>
+        <div class="cp-hero-stat-num">1.200+</div>
+        <div class="cp-hero-stat-label">Cidadanias reconhecidas</div>
+      </div>
+      <div>
+        <div class="cp-hero-stat-num">15+</div>
+        <div class="cp-hero-stat-label">Anos de experiência</div>
+      </div>
+      <div>
+        <div class="cp-hero-stat-num">98%</div>
+        <div class="cp-hero-stat-label">Taxa de aprovação</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══ INTRO + ELEGIBILIDADE ═══════════════════════════════ -->
+<section class="cp-intro">
+
+  <div class="cp-intro-left">
+    <p class="cp-intro-lead">
+      Descubra se você tem direito ao passaporte italiano
+      e abra as portas da União Europeia.
+    </p>
+    <div class="cp-intro-body">
+      <p>
+        A cidadania italiana é transmitida pelo princípio do <em>jus sanguinis</em> —
+        direito do sangue — sem limite de gerações. Basta que um antepassado italiano
+        tenha emigrado sem se naturalizar antes do nascimento do descendente seguinte.
+      </p>
+      <p>
+        O processo pode ser feito via consulado (quando há vagas disponíveis)
+        ou pela via judicial no Brasil, que garante maior agilidade e não depende
+        de agendamento consular.
+      </p>
+      <p>
+        Com a cidadania italiana você obtém passaporte da União Europeia,
+        direito de residir, trabalhar e estudar em todos os 27 países membros.
+      </p>
+    </div>
+  </div>
+
+  <div class="cp-intro-right">
+    <div class="cp-elegibility-box">
+      <h3>Quem tem direito?</h3>
+      <ul class="cp-elegibility-list">
+        <li>Descendentes de italianos em qualquer grau de parentesco</li>
+        <li>O antepassado deve ter emigrado sem se naturalizar antes do nascimento do filho</li>
+        <li>Para linha materna: nascimento do filho após 01/01/1948</li>
+        <li>Sem necessidade de falar italiano para o reconhecimento</li>
+        <li>Cônjuges de cidadãos italianos (naturalização)</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ═══ MODALIDADES ═════════════════════════════════════════ -->
+<section class="cp-modalities">
+
+  <p class="cp-section-eyebrow">Tipos de Reconhecimento</p>
+  <h2 class="cp-section-title">Modalidades de Cidadania Italiana</h2>
+  <p class="cp-section-subtitle">
+    Cada situação familiar tem uma via específica de reconhecimento.
+    Analisamos seu caso para identificar o caminho mais adequado.
+  </p>
+
+  <div class="cp-modalities-grid">
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-icon">🩸</div>
+      <div class="cp-modality-title">Por Descendência</div>
+      <p class="cp-modality-text">
+        Destinada aos descendentes de cidadãos italianos, mediante comprovação
+        documental da linha genealógica e da inexistência de fatos jurídicos
+        que tenham interrompido a transmissão da cidadania.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-icon">⚖️</div>
+      <div class="cp-modality-title">Via Materna (Casos 1948)</div>
+      <p class="cp-modality-text">
+        Quando a transmissão ocorre por ascendência feminina anterior a 1º de
+        janeiro de 1948, o reconhecimento normalmente depende de ação judicial
+        perante os tribunais italianos.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-icon">💍</div>
+      <div class="cp-modality-title">Por Casamento</div>
+      <p class="cp-modality-text">
+        O cônjuge de cidadão italiano pode requerer a naturalização, desde que
+        atendidos os requisitos legais: transcrição do casamento na Itália,
+        prazo mínimo e proficiência em língua italiana.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-icon">👶</div>
+      <div class="cp-modality-title">Filhos Menores</div>
+      <p class="cp-modality-text">
+        Filhos menores de idade podem ser registrados como cidadãos italianos
+        de forma simplificada após o reconhecimento da cidadania do genitor.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-icon">🧑</div>
+      <div class="cp-modality-title">Filhos Maiores</div>
+      <p class="cp-modality-text">
+        Dependendo da situação familiar e da documentação disponível, filhos
+        maiores também podem ter direito ao reconhecimento em procedimentos
+        específicos.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ FORMAS DE PROCESSAMENTO ════════════════════════════ -->
+<section class="cp-processing">
+
+  <p class="cp-section-eyebrow">Onde protocolar</p>
+  <h2 class="cp-section-title">Formas de Processamento</h2>
+
+  <div class="cp-processing-grid">
+
+    <div class="cp-processing-item">
+      <div class="cp-processing-num">A</div>
+      <div class="cp-processing-info">
+        <div class="cp-processing-title">Via Consular (Administrativa)</div>
+        <p class="cp-processing-text">
+          Procedimento realizado perante o consulado italiano competente no
+          país de residência do requerente. Indicada quando há vagas e prazos
+          razoáveis de agendamento.
+        </p>
+      </div>
+    </div>
+
+    <div class="cp-processing-item">
+      <div class="cp-processing-num">B</div>
+      <div class="cp-processing-info">
+        <div class="cp-processing-title">Via Judicial na Itália</div>
+        <p class="cp-processing-text">
+          Ação proposta perante o Poder Judiciário italiano, indicada
+          sobretudo em casos de demora excessiva da via administrativa
+          ou em hipóteses específicas previstas em lei.
+        </p>
+      </div>
+    </div>
+
+    <div class="cp-processing-item">
+      <div class="cp-processing-num">C</div>
+      <div class="cp-processing-info">
+        <div class="cp-processing-title">Reconhecimento Diretamente na Itália</div>
+        <p class="cp-processing-text">
+          Procedimento realizado mediante estabelecimento de residência
+          temporária em território italiano e apresentação do pedido
+          perante o comune competente.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ PROCESSO PASSO A PASSO ═══════════════════════════════ -->
+<section class="cp-process">
+
+  <p class="cp-section-eyebrow">Como funciona</p>
+  <h2 class="cp-section-title">O processo passo a passo</h2>
+
+  <div class="cp-steps">
+
+    <div class="cp-step">
+      <div class="cp-step-num">01</div>
+      <div class="cp-step-title">Análise de Elegibilidade</div>
+      <p class="cp-step-text">
+        Avaliamos sua árvore genealógica para confirmar
+        o direito à cidadania e a via mais indicada
+        (judicial ou consular).
+      </p>
+    </div>
+
+    <div class="cp-step">
+      <div class="cp-step-num">02</div>
+      <div class="cp-step-title">Pesquisa Genealógica</div>
+      <p class="cp-step-text">
+        Localizamos registros de nascimento, casamento e
+        óbito do antepassado italiano em cartórios e
+        arquivos na Itália e no Brasil.
+      </p>
+    </div>
+
+    <div class="cp-step">
+      <div class="cp-step-num">03</div>
+      <div class="cp-step-title">Montagem da Pasta</div>
+      <p class="cp-step-text">
+        Organizamos toda a documentação: certidões,
+        apostilas, traduções juramentadas e
+        comprovação de não naturalização.
+      </p>
+    </div>
+
+    <div class="cp-step">
+      <div class="cp-step-num">04</div>
+      <div class="cp-step-title">Protocolo e Entrega</div>
+      <p class="cp-step-text">
+        Protocolamos o processo no consulado ou
+        vara cível e acompanhamos cada etapa
+        até a emissão do seu passaporte.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ DOCUMENTOS NECESSÁRIOS ══════════════════════════════ -->
+<section class="cp-documents">
+
+  <p class="cp-section-eyebrow">Documentação</p>
+  <h2 class="cp-section-title">Documentos necessários</h2>
+
+  <div class="cp-docs-grid">
+
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon">📋</span>
+      Certidão de nascimento do antepassado italiano (Itália)
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon">📋</span>
+      Certidão de casamento do antepassado (Itália ou Brasil)
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon">📋</span>
+      Certidão de óbito do antepassado (se aplicável)
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon">📋</span>
+      Certidão de naturalização (ou declaração de não naturalização)
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon">📋</span>
+      Certidões de nascimento e casamento de todos os elos da cadeia familiar
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon">📋</span>
+      Documentos do requerente: RG, CPF, certidão de nascimento atualizada
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon">🔏</span>
+      Apostila de Haia em todos os documentos brasileiros
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon">🌍</span>
+      Tradução juramentada para o italiano de todos os documentos em português
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon">📸</span>
+      Fotos 3×4 e comprovante de residência atualizado
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ VANTAGENS ════════════════════════════════════════════ -->
+<section class="cp-benefits">
+
+  <p class="cp-section-eyebrow">Por que vale a pena</p>
+  <h2 class="cp-section-title">Vantagens da Cidadania Italiana</h2>
+
+  <div class="cp-benefits-grid">
+
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-icon">🇪🇺</div>
+      <div class="cp-benefit-text">Direito de residir, trabalhar e estudar em todos os 27 países da União Europeia</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-icon">✈️</div>
+      <div class="cp-benefit-text">Livre circulação no Espaço Schengen sem necessidade de visto</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-icon">🏥</div>
+      <div class="cp-benefit-text">Acesso a sistemas públicos de saúde e educação europeus</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-icon">👨‍👩‍👧</div>
+      <div class="cp-benefit-text">Transmissão da cidadania aos seus descendentes</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-icon">📕</div>
+      <div class="cp-benefit-text">Obtenção de passaporte italiano com acesso a mais de 185 países</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-icon">💼</div>
+      <div class="cp-benefit-text">Ampliação de oportunidades profissionais, acadêmicas e empresariais</div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ VISTOS ════════════════════════════════════════════════ -->
+<section class="cp-visas">
+
+  <p class="cp-section-eyebrow">Além da Cidadania</p>
+  <h2 class="cp-section-title">Tipos de Vistos para a Itália</h2>
+  <p class="cp-section-subtitle">
+    Além do reconhecimento da cidadania, oferecemos assessoria especializada
+    para obtenção de vistos e autorizações de residência.
+  </p>
+
+  <div class="cp-visas-grid">
+
+    <div class="cp-visa-card">
+      <div class="cp-visa-emoji">🎓</div>
+      <div class="cp-visa-name">Visto de Estudo</div>
+      <p class="cp-visa-desc">Para estudantes matriculados em instituições de ensino italianas.</p>
+    </div>
+
+    <div class="cp-visa-card">
+      <div class="cp-visa-emoji">💼</div>
+      <div class="cp-visa-name">Visto de Trabalho</div>
+      <p class="cp-visa-desc">Para profissionais contratados por empregadores italianos ou autorizados a exercer atividade laboral.</p>
+    </div>
+
+    <div class="cp-visa-card">
+      <div class="cp-visa-emoji">👨‍👩‍👧</div>
+      <div class="cp-visa-name">Reunião Familiar</div>
+      <p class="cp-visa-desc">Destinado a familiares de cidadãos italianos ou residentes legais na Itália.</p>
+    </div>
+
+    <div class="cp-visa-card">
+      <div class="cp-visa-emoji">🏡</div>
+      <div class="cp-visa-name">Residência Eletiva</div>
+      <p class="cp-visa-desc">Para pessoas com renda própria suficiente para residir na Itália sem exercer atividade profissional.</p>
+    </div>
+
+    <div class="cp-visa-card">
+      <div class="cp-visa-emoji">📈</div>
+      <div class="cp-visa-name">Visto para Investidores</div>
+      <p class="cp-visa-desc">Concedido a estrangeiros que realizam investimentos qualificados na economia italiana.</p>
+    </div>
+
+    <div class="cp-visa-card">
+      <div class="cp-visa-emoji">💻</div>
+      <div class="cp-visa-name">Nômades Digitais</div>
+      <p class="cp-visa-desc">Para profissionais que trabalham remotamente e desejam estabelecer residência legal na Itália.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ ASSESSORIA COMPLETA ══════════════════════════════════ -->
+<section class="cp-services">
+
+  <p class="cp-section-eyebrow">Nosso trabalho</p>
+  <h2 class="cp-section-title">Assessoria Jurídica e Documental Completa</h2>
+  <p class="cp-section-body">
+    Com atuação técnica, estratégica e personalizada, proporcionamos segurança
+    jurídica, transparência e eficiência na condução de processos de cidadania
+    italiana e imigração internacional.
+  </p>
+
+  <div class="cp-services-grid">
+    <div class="cp-service-item"><span class="cp-service-check">✔</span> Análise de elegibilidade</div>
+    <div class="cp-service-item"><span class="cp-service-check">✔</span> Pesquisa genealógica</div>
+    <div class="cp-service-item"><span class="cp-service-check">✔</span> Organização documental</div>
+    <div class="cp-service-item"><span class="cp-service-check">✔</span> Retificações e regularizações</div>
+    <div class="cp-service-item"><span class="cp-service-check">✔</span> Traduções e apostilamento</div>
+    <div class="cp-service-item"><span class="cp-service-check">✔</span> Representação administrativa e judicial</div>
+    <div class="cp-service-item"><span class="cp-service-check">✔</span> Acompanhamento integral até a conclusão</div>
+    <div class="cp-service-item"><span class="cp-service-check">✔</span> Assessoria para vistos e residências</div>
+  </div>
+
+</section>
+
+
+<!-- ═══ CTA ══════════════════════════════════════════════════ -->
+<section class="cp-cta">
+  <h2 class="cp-cta-title">Pronto para descobrir sua cidadania italiana?</h2>
+  <p class="cp-cta-sub">
+    Fale com nossa equipe e receba uma análise gratuita do seu caso.
+  </p>
+  <a href="https://wa.me/5500000000000" class="cp-cta-btn" target="_blank" rel="noopener">
+    Consulta Gratuita pelo WhatsApp
+  </a>
+</section>
+
+
+<!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
+<footer id="contato">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brand-name">Correia Quintella</div>
+      <div class="brand-sub">Assessoria & Consultoria de Cidadanias</div>
+      <p>Ajudamos brasileiros a descobrir e reconhecer sua herança europeia, com rigor jurídico e pesquisa genealógica especializada.</p>
+      <div class="footer-flags">🇧🇷 🇵🇹 🇮🇹 🇪🇸 🇩🇪 🇺🇸</div>
+    </div>
+    <div class="footer-col">
+      <h4>Cidadanias</h4>
+      <ul>
+        <li><a href="cidadania-italiana.html">Cidadania Italiana</a></li>
+        <li><a href="cidadania-portuguesa.html">Cidadania Portuguesa</a></li>
+        <li><a href="cidadania-espanhola.html">Cidadania Espanhola</a></li>
+        <li><a href="cidadania-alema.html">Cidadania Alemã</a></li>
+        <li><a href="index.html#cidadania">Pesquisa Genealógica</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#">Quem somos</a></li>
+        <li><a href="#">Nossa equipe</a></li>
+        <li><a href="#">Depoimentos</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Parceiros</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="#">WhatsApp</a></li>
+        <li><a href="#">E-mail</a></li>
+        <li><a href="#">Agendar consulta</a></li>
+        <li><a href="#">Acompanhar processo</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <p>© 2025 Correia Quintella Assessoria & Consultoria de Cidadanias. Todos os direitos reservados.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+    </div>
+  </div>
+  <div class="footer-gold-line"></div>
+</footer>
+
+<!-- ═══ WHATSAPP FLOAT ═══════════════════════════════════════ -->
+<a class="whatsapp-float" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+  <div class="wa-icon">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </div>
+  <span class="wa-label">Fale pelo WhatsApp</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

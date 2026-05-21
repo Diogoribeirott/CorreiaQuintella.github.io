@@ -20,7 +20,7 @@
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#cidadania">Cidadania</a></li>
-    <li><a href="#acompanhamento">Acompanhamento de Solicitação</a></li>
+    <li><a href="login.php">Acompanhamento de Solicitação</a></li>
     <li><a href="#contato" class="nav-cta">Fale Conosco</a></li>
   </ul>
 
@@ -32,8 +32,8 @@
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#home"          onclick="closeMobile()">Home</a>
-  <a href="#cidadania"     onclick="closeMobile()">Cidadania</a>
-  <a href="#acompanhamento" onclick="closeMobile()">Acompanhamento</a>
+  <a href="#cidadania"     onclick="closeMobile()">Cidadanias</a>
+  <a href="login.php" onclick="closeMobile()">Acompanhamento</a>
   <a href="#contato"       onclick="closeMobile()">Fale Conosco</a>
 </div>
 
@@ -54,7 +54,7 @@
 
       <p class="hero-subtitle">
         Pesquisa genealógica no Brasil e no exterior.<br>
-        Reconhecemos seu direito à cidadania italiana, portuguesa, espanhola e alemã.
+        Reconhecemos seu direito à cidadania italiana, portuguesa, espanhola, alemã, austríaca, tcheca, suíça, polonesa e francesa.
       </p>
 
       <div class="hero-flags">
@@ -62,7 +62,11 @@
         <div class="flag-chip">🇵🇹 Portuguesa</div>
         <div class="flag-chip">🇪🇸 Espanhola</div>
         <div class="flag-chip">🇩🇪 Alemã</div>
-        
+        <div class="flag-chip">🇦🇹 Austríaca</div>
+        <div class="flag-chip">🇨🇿 Tcheca</div>
+        <div class="flag-chip">🇨🇭 Suíça</div>
+        <div class="flag-chip">🇵🇱 Polonesa</div>
+        <div class="flag-chip">🇫🇷 Francesa</div>
       </div>
 
    
@@ -135,7 +139,7 @@
     <div class="stat-label">Anos de experiência</div>
   </div>
   <div class="stat-item">
-    <div class="stat-num">4</div>
+    <div class="stat-num">9</div>
     <div class="stat-label">Países europeus</div>
   </div>
   <div class="stat-item">
@@ -145,97 +149,168 @@
 </div>
 
 
-<!-- Placeholder section -->
-<!-- ═══ SERVIÇOS ═══════════════════════════════════════════ -->
-<section class="services-section" id="acompanhamento">
+<!-- ═══ CIDADANIAS ══════════════════════════════════════════ -->
+<section class="citizenships-section" id="cidadania">
 
-  <div class="services-header">
-    <p class="services-eyebrow">Serviços Especializados</p>
-
-    <h2 class="services-title">
-      Como podemos ajudar você?
-    </h2>
-
-    <p class="services-subtitle">
-      Atuamos em todas as etapas do processo de cidadania europeia,
-      oferecendo suporte documental, jurídico e genealógico no Brasil e no exterior.
+  <div class="citizenships-header">
+    <p class="citizenships-eyebrow">Assessoria Especializada</p>
+    <h2 class="citizenships-title">Cidadanias Europeias</h2>
+    <p class="citizenships-subtitle">
+      Reconhecemos seu direito à cidadania europeia com suporte completo
+      em todas as etapas — da pesquisa genealógica à entrega do passaporte.
     </p>
   </div>
 
-  <div class="services-grid">
+  <div class="citizenships-grid">
 
-    <div class="service-card">
-      <div class="service-icon">📜</div>
-      <h3>Pesquisa Genealógica</h3>
-      <p>
-        Localização de registros familiares e certidões
-        em arquivos nacionais e internacionais.
-      </p>
+    <!-- ── ITALIANA ── -->
+    <a class="citizenship-card" href="cidadania-italiana.html">
+      <div class="cc-flag">🇮🇹</div>
+      <div class="cc-body">
+        <div class="cc-country">Italiana</div>
+        <div class="cc-tagline">Via judicial ou consular</div>
+        <ul class="cc-tags">
+          <li>Direito do sangue</li>
+          <li>Sem limite de gerações</li>
+          <li>Passaporte UE</li>
+        </ul>
+      </div>
+      <div class="cc-arrow">→</div>
+    </a>
+
+    <!-- ── PORTUGUESA ── -->
+    <a class="citizenship-card" href="cidadania-portuguesa.html">
+      <div class="cc-flag">🇵🇹</div>
+      <div class="cc-body">
+        <div class="cc-country">Portuguesa</div>
+        <div class="cc-tagline">Por descendência ou naturalização</div>
+        <ul class="cc-tags">
+          <li>Netos de portugueses</li>
+          <li>Acesso à UE e CPLP</li>
+          <li>Processo consular</li>
+        </ul>
+      </div>
+      <div class="cc-arrow">→</div>
+    </a>
+
+    <!-- ── ESPANHOLA ── -->
+    <a class="citizenship-card" href="cidadania-espanhola.html">
+      <div class="cc-flag">🇪🇸</div>
+      <div class="cc-body">
+        <div class="cc-country">Espanhola</div>
+        <div class="cc-tagline">Lei da Memória Democrática</div>
+        <ul class="cc-tags">
+          <li>Netos de espanhóis</li>
+          <li>Lei 20/2022</li>
+          <li>Passaporte UE</li>
+        </ul>
+      </div>
+      <div class="cc-arrow">→</div>
+    </a>
+
+    <!-- ── ALEMÃ ── -->
+    <a class="citizenship-card" href="cidadania-alema.html">
+      <div class="cc-flag">🇩🇪</div>
+      <div class="cc-body">
+        <div class="cc-country">Alemã</div>
+        <div class="cc-tagline">Por descendência ou Art. 116</div>
+        <ul class="cc-tags">
+          <li>Descendentes de alemães</li>
+          <li>Perseguição nazista</li>
+          <li>Passaporte UE</li>
+        </ul>
+      </div>
+      <div class="cc-arrow">→</div>
+    </a>
+
+    <!-- ── AUSTRÍACA ── -->
+    <a class="citizenship-card" href="cidadania-austriaca.html">
+      <div class="cc-flag">🇦🇹</div>
+      <div class="cc-body">
+        <div class="cc-country">Austríaca</div>
+        <div class="cc-tagline">Descendência ou restituição nazista</div>
+        <ul class="cc-tags">
+          <li>Jus sanguinis</li>
+          <li>Vítimas do nazismo</li>
+          <li>Passaporte UE</li>
+        </ul>
+      </div>
+      <div class="cc-arrow">→</div>
+    </a>
+
+    <!-- ── TCHECA ── -->
+    <a class="citizenship-card" href="cidadania-tcheca.html">
+      <div class="cc-flag">🇨🇿</div>
+      <div class="cc-body">
+        <div class="cc-country">Tcheca</div>
+        <div class="cc-tagline">Por descendência ou naturalização</div>
+        <ul class="cc-tags">
+          <li>Descendentes de tchecos</li>
+          <li>Residência legal</li>
+          <li>Passaporte UE</li>
+        </ul>
+      </div>
+      <div class="cc-arrow">→</div>
+    </a>
+
+    <!-- ── SUÍÇA ── -->
+    <a class="citizenship-card" href="cidadania-suica.html">
+      <div class="cc-flag">🇨🇭</div>
+      <div class="cc-body">
+        <div class="cc-country">Suíça</div>
+        <div class="cc-tagline">Por descendência ou naturalização</div>
+        <ul class="cc-tags">
+          <li>Filhos de suíços</li>
+          <li>Recuperação da nacionalidade</li>
+          <li>Um dos melhores passaportes</li>
+        </ul>
+      </div>
+      <div class="cc-arrow">→</div>
+    </a>
+
+    <!-- ── POLONESA ── -->
+    <a class="citizenship-card" href="cidadania-polonesa.html">
+      <div class="cc-flag">🇵🇱</div>
+      <div class="cc-body">
+        <div class="cc-country">Polonesa</div>
+        <div class="cc-tagline">Jus sanguinis sem limite de gerações</div>
+        <ul class="cc-tags">
+          <li>Descendentes de poloneses</li>
+          <li>Sem limite de gerações</li>
+          <li>Passaporte UE</li>
+        </ul>
+      </div>
+      <div class="cc-arrow">→</div>
+    </a>
+
+    <!-- ── FRANCESA ── -->
+    <a class="citizenship-card" href="cidadania-francesa.html">
+      <div class="cc-flag">🇫🇷</div>
+      <div class="cc-body">
+        <div class="cc-country">Francesa</div>
+        <div class="cc-tagline">Por descendência ou naturalização</div>
+        <ul class="cc-tags">
+          <li>Filhos de franceses</li>
+          <li>Casamento e residência</li>
+          <li>Passaporte UE</li>
+        </ul>
+      </div>
+      <div class="cc-arrow">→</div>
+    </a>
+
+  </div>
+
+  <!-- Serviços de suporte -->
+  <div class="support-services">
+    <p class="support-title">Serviços de Apoio</p>
+    <div class="support-grid">
+      <div class="support-item"><span>📜</span> Pesquisa Genealógica</div>
+      <div class="support-item"><span>🗂️</span> Montagem de Pasta</div>
+      <div class="support-item"><span>✍️</span> Apostilamento</div>
+      <div class="support-item"><span>🌍</span> Tradução Juramentada</div>
+      <div class="support-item"><span>⚖️</span> Retificação de Documentos</div>
+      <div class="support-item"><span>🏛️</span> Agendamentos Consulares</div>
     </div>
-
-    <div class="service-card">
-      <div class="service-icon">🗂️</div>
-      <h3>Montagem de Pasta</h3>
-      <p>
-        Organização completa da documentação exigida
-        para processos consulares e judiciais.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">✍️</div>
-      <h3>Apostilamento</h3>
-      <p>
-        Apostilamento de Haia e validação internacional
-        de documentos brasileiros.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">🌍</div>
-      <h3>Tradução Juramentada</h3>
-      <p>
-        Traduções oficiais reconhecidas para uso
-        em consulados e órgãos estrangeiros.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">⚖️</div>
-      <h3>Retificação de Documentos</h3>
-      <p>
-        Correção de nomes, datas e informações
-        em registros civis e certidões.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">📂</div>
-      <h3>Coleta de Documentos</h3>
-      <p>
-        Busca e emissão de certidões no Brasil
-        e também no exterior.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">🏛️</div>
-      <h3>Agendamentos</h3>
-      <p>
-        Auxílio com agendamentos em consulados,
-        cartórios e órgãos internacionais.
-      </p>
-    </div>
-
-    <div class="service-card">
-      <div class="service-icon">🇮🇹</div>
-      <h3>Cidadania Italiana</h3>
-      <p>
-        Assessoria completa para reconhecimento
-        da cidadania italiana via judicial ou consular.
-      </p>
-    </div>
-
   </div>
 
 </section>
@@ -305,17 +380,22 @@
       <div class="brand-name">Correia Quintella</div>
       <div class="brand-sub">Assessoria & Consultoria de Cidadanias</div>
       <p>Ajudamos brasileiros a descobrir e reconhecer sua herança europeia, com rigor jurídico e pesquisa genealógica especializada.</p>
-      <div class="footer-flags">🇧🇷 🇵🇹 🇮🇹 🇪🇸 🇩🇪 🇺🇸</div>
+      <div class="footer-flags">🇧🇷 🇵🇹 🇮🇹 🇪🇸 🇩🇪 🇦🇹 🇨🇿 🇨🇭 🇵🇱 🇫🇷</div>
     </div>
 
     <!-- Serviços -->
     <div class="footer-col">
       <h4>Cidadanias</h4>
       <ul>
-        <li><a href="#">Cidadania Italiana</a></li>
-        <li><a href="#">Cidadania Portuguesa</a></li>
-        <li><a href="#">Cidadania Espanhola</a></li>
-        <li><a href="#">Cidadania Alemã</a></li>
+        <li><a href="cidadania-italiana.html">Cidadania Italiana</a></li>
+        <li><a href="cidadania-portuguesa.html">Cidadania Portuguesa</a></li>
+        <li><a href="cidadania-espanhola.html">Cidadania Espanhola</a></li>
+        <li><a href="cidadania-alema.html">Cidadania Alemã</a></li>
+        <li><a href="cidadania-austriaca.html">Cidadania Austríaca</a></li>
+        <li><a href="cidadania-tcheca.html">Cidadania Tcheca</a></li>
+        <li><a href="cidadania-suica.html">Cidadania Suíça</a></li>
+        <li><a href="cidadania-polonesa.html">Cidadania Polonesa</a></li>
+        <li><a href="cidadania-francesa.html">Cidadania Francesa</a></li>
         <li><a href="#">Pesquisa Genealógica</a></li>
       </ul>
     </div>
@@ -357,6 +437,15 @@
 
   <div class="footer-gold-line"></div>
 </footer>
+
+
+<!-- ═══ WHATSAPP FLOAT ══════════════════════════════════════ -->
+<a class="whatsapp-float" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+  <div class="wa-icon">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </div>
+  <span class="wa-label">Fale pelo WhatsApp</span>
+</a>
 
 <script src="script.js"></script>
 </body>
