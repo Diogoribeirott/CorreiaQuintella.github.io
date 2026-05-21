@@ -1049,9 +1049,10 @@ footer::after {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   margin-bottom: 72px;
+  grid-auto-rows: 380px;
 }
 .citizenship-card {
   backdrop-filter: blur(10px);
@@ -1157,6 +1158,98 @@ footer::after {
 .citizenship-card:hover .cc-arrow {
   transform: translateX(5px);
   opacity: 1;
+}
+
+/* ── Photo background cards ── */
+.cc-photo-card {
+  background: var(--cc-bg) center/cover no-repeat !important;
+  padding: 0 !important;
+  min-height: 380px;
+  border: none !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.28) !important;
+}
+
+.cc-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 30, 15, 0.92) 0%,
+    rgba(10, 30, 15, 0.55) 50%,
+    rgba(10, 30, 15, 0.25) 100%
+  );
+  border-radius: 20px;
+  transition: background 0.4s ease;
+}
+
+.cc-photo-card:hover .cc-photo-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(10, 30, 15, 0.97) 0%,
+    rgba(10, 30, 15, 0.7) 55%,
+    rgba(10, 30, 15, 0.38) 100%
+  );
+}
+
+.cc-photo-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 32px 28px 28px;
+  justify-content: flex-end;
+}
+
+.cc-photo-card .cc-flag {
+  font-size: 38px;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+}
+
+.cc-photo-card .cc-country {
+  font-size: 28px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+
+.cc-photo-card .cc-tagline {
+  font-size: 14px;
+  color: var(--gold-light);
+  margin-bottom: 14px;
+  opacity: 1;
+}
+
+.cc-photo-card .cc-tags {
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.cc-photo-card:hover .cc-tags {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cc-photo-card .cc-arrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  background: rgba(201,168,76,0.18);
+  border: 1px solid rgba(201,168,76,0.35);
+  padding: 8px 16px;
+  border-radius: 100px;
+  align-self: flex-start;
+  margin-top: 4px;
+  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.cc-photo-card:hover .cc-arrow {
+  background: rgba(201,168,76,0.35);
+  border-color: rgba(201,168,76,0.7);
+  transform: translateX(4px) !important;
 }
 
 /* ── Support services strip ── */
