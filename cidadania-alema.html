@@ -9,28 +9,32 @@
 </head>
 <body>
 
-<!-- ═══ NAVBAR ═════════════════════════════════════════════ -->
+<!-- ═══ NAVBAR ══════════════════════════════════════════════ -->
 <nav class="navbar" id="navbar">
-  <a href="index.html" class="nav-logo">
+  <a href="#home" class="nav-logo">
     <span>Correia Quintella</span>
-    <span>Assessoria & Consultoria de Cidadanias</span>
+    <span class=" text-decoration-none">Assessoria & Consultoria de Cidadanias</span>
+    
   </a>
+
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#cidadania">Cidadania</a></li>
-    <li><a href="index.html#acompanhamento">Acompanhamento</a></li>
-    <li><a href="index.html#contato" class="nav-cta">Fale Conosco</a></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#cidadania">Cidadanias</a></li>
+    <li><a href="login.html">Acompanhar processo</a></li>
+    <li><a href="https://wa.me/556130460143" class="nav-cta" target="_blank" onclick="closeMobile()">Fale Conosco</a></li>
   </ul>
+
   <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
     <span></span><span></span><span></span>
   </div>
 </nav>
 
+<!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html"                onclick="closeMobile()">Home</a>
-  <a href="index.html#cidadania"      onclick="closeMobile()">Cidadania</a>
-  <a href="index.html#acompanhamento" onclick="closeMobile()">Acompanhamento</a>
-  <a href="index.html#contato"        onclick="closeMobile()">Fale Conosco</a>
+  <a href="#home"          onclick="closeMobile()">Home</a>
+  <a href="#cidadania"     onclick="closeMobile()">Cidadanias</a>
+  <a href="login.php" onclick="closeMobile()">Acompanhar processo</a>
+  <a href="https://wa.me/556130460143" target="_blank"  onclick="closeMobile()">Fale Conosco</a>
 </div>
 
 
@@ -41,8 +45,7 @@
 
     <a href="index.html#cidadania" class="cp-back">← Todas as cidadanias</a>
 
-    <p class="cp-eyebrow">
-      <span class="cp-flag">🇩🇪</span>
+    <p class="cp-eyebrow"></span>
       Assessoria Especializada
     </p>
 
@@ -130,7 +133,6 @@
   <div class="cp-modalities-grid cp-modalities-grid--4">
 
     <div class="cp-modality-card">
-      <div class="cp-modality-icon">🩸</div>
       <div class="cp-modality-title">Por Descendência <span style="font-size:12px;font-family:'DM Sans',sans-serif;font-weight:400;color:var(--text-mid)">(Abstammung)</span></div>
       <p class="cp-modality-text">
         Baseada no <em>jus sanguinis</em>, permite o reconhecimento aos
@@ -140,7 +142,6 @@
     </div>
 
     <div class="cp-modality-card">
-      <div class="cp-modality-icon">📜</div>
       <div class="cp-modality-title">Por Declaração</div>
       <p class="cp-modality-text">
         Aplicável em hipóteses de reparação legal para descendentes que foram
@@ -150,7 +151,6 @@
     </div>
 
     <div class="cp-modality-card">
-      <div class="cp-modality-icon">🏛️</div>
       <div class="cp-modality-title">Restituição <span style="font-size:12px;font-family:'DM Sans',sans-serif;font-weight:400;color:var(--text-mid)">(Art. 116)</span></div>
       <p class="cp-modality-text">
         Voltada a descendentes de pessoas perseguidas pelo regime
@@ -160,7 +160,6 @@
     </div>
 
     <div class="cp-modality-card">
-      <div class="cp-modality-icon">🏠</div>
       <div class="cp-modality-title">Por Naturalização</div>
       <p class="cp-modality-text">
         Destinada a estrangeiros que residam legalmente na Alemanha e
@@ -177,8 +176,8 @@
 <!-- ═══ REGRAS E PERFIS ══════════════════════════════════════ -->
 <section class="cp-processing">
 
-  <p class="cp-section-eyebrow" style="color:var(--gold);">Perfis Elegíveis</p>
-  <h2 class="cp-section-title" style="color:var(--white);">Quem pode requerer</h2>
+  <p class="cp-section-eyebrow">Perfis Elegíveis</p>
+  <h2 class="cp-section-title">Quem pode requerer</h2>
 
   <div class="cp-processing-grid">
 
@@ -244,7 +243,7 @@
   <div class="cp-steps">
 
     <div class="cp-step">
-      <div class="cp-step-num">⚖️</div>
+      <div class="cp-step-num">01</div>
       <div class="cp-step-title">Linha Paterna vs. Materna</div>
       <p class="cp-step-text">
         A legislação histórica alemã tratou de forma distinta a transmissão
@@ -254,7 +253,7 @@
     </div>
 
     <div class="cp-step">
-      <div class="cp-step-num">💍</div>
+      <div class="cp-step-num">02</div>
       <div class="cp-step-title">Estado Civil dos Pais</div>
       <p class="cp-step-text">
         Exigências relativas ao estado civil e ao reconhecimento formal
@@ -264,7 +263,7 @@
     </div>
 
     <div class="cp-step">
-      <div class="cp-step-num">📅</div>
+      <div class="cp-step-num">03</div>
       <div class="cp-step-title">Alterações Legislativas</div>
       <p class="cp-step-text">
         Mudanças recentes na lei ampliaram direitos anteriormente restritos.
@@ -274,7 +273,7 @@
     </div>
 
     <div class="cp-step">
-      <div class="cp-step-num">🔎</div>
+      <div class="cp-step-num">04</div>
       <div class="cp-step-title">Perda por Naturalização</div>
       <p class="cp-step-text">
         Possíveis hipóteses de perda da cidadania por naturalização
@@ -291,45 +290,45 @@
 <!-- ═══ PESQUISA GENEALÓGICA ════════════════════════════════ -->
 <section class="cp-documents">
 
-  <p class="cp-section-eyebrow" style="color:var(--gold);">Pesquisa Genealógica</p>
-  <h2 class="cp-section-title" style="color:var(--green-dark);">Informações essenciais sobre o antepassado</h2>
+  <p class="cp-section-eyebrow">Pesquisa Genealógica</p>
+  <h2 class="cp-section-title">Informações essenciais sobre o antepassado</h2>
 
   <div class="cp-docs-grid">
 
     <div class="cp-doc-item">
-      <span class="cp-doc-icon">👤</span>
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
       Nome completo do imigrante alemão
     </div>
     <div class="cp-doc-item">
-      <span class="cp-doc-icon">📅</span>
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
       Data e local de nascimento na Alemanha
     </div>
     <div class="cp-doc-item">
-      <span class="cp-doc-icon">💍</span>
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
       Dados de casamento e óbito do antepassado
     </div>
     <div class="cp-doc-item">
-      <span class="cp-doc-icon">🚢</span>
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
       Ano de imigração, porto de embarque e desembarque
     </div>
     <div class="cp-doc-item">
-      <span class="cp-doc-icon">⚓</span>
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
       Nome do navio, quando disponível
     </div>
     <div class="cp-doc-item">
-      <span class="cp-doc-icon">📋</span>
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
       Registros civis e consulares brasileiros e alemães
     </div>
     <div class="cp-doc-item">
-      <span class="cp-doc-icon">📋</span>
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
       Certidões de todos os elos da cadeia familiar
     </div>
     <div class="cp-doc-item">
-      <span class="cp-doc-icon">🔏</span>
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
       Apostila de Haia em todos os documentos brasileiros
     </div>
     <div class="cp-doc-item">
-      <span class="cp-doc-icon">🌍</span>
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
       Tradução juramentada para o alemão dos documentos em português
     </div>
 
@@ -347,27 +346,21 @@
   <div class="cp-benefits-grid">
 
     <div class="cp-benefit-item">
-      <div class="cp-benefit-icon">🇪🇺</div>
       <div class="cp-benefit-text">Direito de residir, trabalhar e estudar na Alemanha e em todos os 27 países da União Europeia</div>
     </div>
     <div class="cp-benefit-item">
-      <div class="cp-benefit-icon">✈️</div>
       <div class="cp-benefit-text">Livre circulação no Espaço Schengen sem necessidade de visto</div>
     </div>
     <div class="cp-benefit-item">
-      <div class="cp-benefit-icon">🏥</div>
       <div class="cp-benefit-text">Acesso a um dos melhores sistemas públicos de saúde e educação do mundo</div>
     </div>
     <div class="cp-benefit-item">
-      <div class="cp-benefit-icon">👨‍👩‍👧</div>
       <div class="cp-benefit-text">Possibilidade de transmitir a cidadania aos seus descendentes</div>
     </div>
     <div class="cp-benefit-item">
-      <div class="cp-benefit-icon">📕</div>
       <div class="cp-benefit-text">Passaporte alemão com acesso facilitado a mais de 190 países</div>
     </div>
     <div class="cp-benefit-item">
-      <div class="cp-benefit-icon">💼</div>
       <div class="cp-benefit-text">Ampliação de oportunidades acadêmicas, profissionais e empresariais na Europa</div>
     </div>
 
@@ -388,38 +381,39 @@
   </p>
 
   <div class="cp-services-grid">
-    <div class="cp-service-item"><span class="cp-service-check">✔</span> Análise de elegibilidade</div>
-    <div class="cp-service-item"><span class="cp-service-check">✔</span> Pesquisa genealógica internacional</div>
-    <div class="cp-service-item"><span class="cp-service-check">✔</span> Organização e regularização documental</div>
-    <div class="cp-service-item"><span class="cp-service-check">✔</span> Traduções juramentadas e apostilamento</div>
-    <div class="cp-service-item"><span class="cp-service-check">✔</span> Protocolo perante consulado ou autoridades alemãs</div>
-    <div class="cp-service-item"><span class="cp-service-check">✔</span> Acompanhamento integral do processo</div>
-    <div class="cp-service-item"><span class="cp-service-check">✔</span> Análise cronológica da legislação aplicável</div>
-    <div class="cp-service-item"><span class="cp-service-check">✔</span> Estratégia jurídica personalizada</div>
+    <div class="cp-service-item">Análise de elegibilidade</div>
+    <div class="cp-service-item">Pesquisa genealógica internacional</div>
+    <div class="cp-service-item">Organização e regularização documental</div>
+    <div class="cp-service-item">Traduções juramentadas e apostilamento</div>
+    <div class="cp-service-item">Protocolo perante consulado ou autoridades alemãs</div>
+    <div class="cp-service-item">Acompanhamento integral do processo</div>
+    <div class="cp-service-item">Análise cronológica da legislação aplicável</div>
+    <div class="cp-service-item">Estratégia jurídica personalizada</div>
   </div>
 
 </section>
+
 
 <!-- ═══ CTA ══════════════════════════════════════════════════ -->
 <section class="cp-cta">
   <h2 class="cp-cta-title">Inicie sua análise de elegibilidade</h2>
   <p class="cp-cta-sub">Cada caso é único. Descubra se você tem direito à cidadania alemã.</p>
-   <a href="https://wa.me/5500000000000" class="cp-cta-btn" target="_blank" rel="noopener">
-    Consulta pelo WhatsApp
-  </a>
+  <a href="https://wa.me/556130460143" target="_blank" class="cp-cta-btn">Fale com um especialista →</a>
 </section>
 
 
-
-<!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
+<!-- ═══ FOOTER ════════════════════════════════════════════════ -->
 <footer id="contato">
   <div class="footer-grid">
+    <!-- Brand column -->
     <div class="footer-brand">
       <div class="brand-name">Correia Quintella</div>
       <div class="brand-sub">Assessoria & Consultoria de Cidadanias</div>
       <p>Ajudamos brasileiros a descobrir e reconhecer sua herança europeia, com rigor jurídico e pesquisa genealógica especializada.</p>
-      <div class="footer-flags">🇧🇷 🇵🇹 🇮🇹 🇪🇸 🇩🇪 🇺🇸</div>
+      <div class="footer-flags">🇧🇷 🇵🇹 🇮🇹 🇪🇸 🇩🇪 🇦🇹 🇨🇿 🇨🇭 🇵🇱 🇫🇷</div>
     </div>
+
+    <!-- Serviços -->
     <div class="footer-col">
       <h4>Cidadanias</h4>
       <ul>
@@ -427,31 +421,38 @@
         <li><a href="cidadania-portuguesa.html">Cidadania Portuguesa</a></li>
         <li><a href="cidadania-espanhola.html">Cidadania Espanhola</a></li>
         <li><a href="cidadania-alema.html">Cidadania Alemã</a></li>
-        <li><a href="index.html#cidadania">Pesquisa Genealógica</a></li>
+        <li><a href="cidadania-austriaca.html">Cidadania Austríaca</a></li>
+        <li><a href="cidadania-tcheca.html">Cidadania Tcheca</a></li>
+        <li><a href="cidadania-suica.html">Cidadania Suíça</a></li>
+        <li><a href="cidadania-polonesa.html">Cidadania Polonesa</a></li>
+        <li><a href="cidadania-francesa.html">Cidadania Francesa</a></li>
+        <li><a href="#">Pesquisa Genealógica</a></li>
       </ul>
     </div>
+
+    <!-- Empresa -->
     <div class="footer-col">
       <h4>Empresa</h4>
       <ul>
-        <li><a href="#">Quem somos</a></li>
-        <li><a href="#">Nossa equipe</a></li>
-        <li><a href="#">Depoimentos</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Parceiros</a></li>
+        <li><a href="#equipe">Quem somos</a></li>
+        <li><a href="#equipe">Nossa equipe</a></li>
       </ul>
     </div>
+
+    <!-- Contato -->
     <div class="footer-col">
       <h4>Contato</h4>
       <ul>
-        <li><a href="#">WhatsApp</a></li>
-        <li><a href="#">E-mail</a></li>
-        <li><a href="#">Agendar consulta</a></li>
-        <li><a href="#">Acompanhar processo</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><a href="https://wa.me/556130460143" target="_blank">WhatsApp</a></li>
+        <li><a href="mailto:contato@cqcidadania.com.br">contato@cqcidadania.com.br</a></li>
+        <li><a  href="https://wa.me/556130460143" target="_blank">Agendar consulta</a></li>
+        <li><a href="login.html">Acompanhar processo</a></li>
       </ul>
     </div>
   </div>
+
   <div class="footer-divider"></div>
+
   <div class="footer-bottom">
     <p>© 2025 Correia Quintella Assessoria & Consultoria de Cidadanias. Todos os direitos reservados.</p>
     <div class="footer-bottom-links">
@@ -459,6 +460,7 @@
       <a href="#">Termos de Uso</a>
     </div>
   </div>
+
   <div class="footer-gold-line"></div>
 </footer>
 

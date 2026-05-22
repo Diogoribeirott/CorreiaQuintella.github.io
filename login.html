@@ -1,0 +1,338 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; }
+  .root {
+    min-height: 600px;
+    background: radial-gradient(ellipse 70% 55% at 8% 15%, rgba(58,107,68,.5) 0%, transparent 55%),
+                radial-gradient(ellipse 55% 65% at 92% 85%, rgba(201,168,76,.1) 0%, transparent 50%),
+                linear-gradient(155deg, #1a3022 0%, #1e3825 45%, #162a1e 100%);
+    display: flex; flex-direction: column;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+  }
+  .topbar {
+    padding: 10px 24px;
+    border-bottom: 1px solid rgba(201,168,76,.12);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .topbar-back { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.4); display: flex; align-items: center; gap: 6px; }
+  .topbar-label { font-size: 9px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.18); }
+  .wrapper { flex: 1; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+  .card {
+    width: 100%; max-width: 380px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(201,168,76,.2);
+    border-radius: 18px;
+    padding: 26px 30px 22px;
+    backdrop-filter: blur(18px);
+  }
+  .logo { text-align: center; margin-bottom: 16px; }
+  .brand { font-size: 16px; font-weight: 700; color: #fff; letter-spacing: .04em; }
+  .brand-sub { font-size: 8px; letter-spacing: .22em; text-transform: uppercase; color: #e8c97a; margin-top: 2px; }
+  .gold-line { width: 36px; height: 2px; background: linear-gradient(90deg, #c9a84c, #e8c97a); margin: 8px auto 0; border-radius: 2px; }
+  .badge {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    background: rgba(201,168,76,.1); border: 1px solid rgba(201,168,76,.22);
+    border-radius: 100px; padding: 4px 12px; margin: 0 auto 14px;
+    font-size: 9px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+    color: #e8c97a; width: fit-content;
+  }
+  .title { font-size: 20px; font-weight: 700; color: #fff; text-align: center; margin-bottom: 2px; }
+  .subtitle { font-size: 12px; font-style: italic; color: rgba(255,255,255,.4); text-align: center; margin-bottom: 18px; }
+
+  .mock-pills {
+    display: flex; gap: 6px; margin-bottom: 16px;
+  }
+  .mpill {
+    flex: 1; padding: 7px 8px; border-radius: 8px; cursor: pointer;
+    border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.04);
+    text-align: center; transition: all .2s;
+  }
+  .mpill:hover { border-color: rgba(201,168,76,.35); background: rgba(201,168,76,.08); }
+  .mpill.active { border-color: rgba(201,168,76,.6); background: rgba(201,168,76,.14); }
+  .mpill-icon { font-size: 15px; margin-bottom: 2px; }
+  .mpill-label { font-size: 10px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+  .mpill.active .mpill-label { color: #e8c97a; }
+  .mpill-hint { font-size: 9px; color: rgba(255,255,255,.3); margin-top: 1px; }
+  .mpill.active .mpill-hint { color: rgba(232,201,122,.5); }
+
+  .alert-error {
+    background: rgba(192,57,43,.12); border: 1px solid rgba(192,57,43,.28);
+    color: #e07070; border-radius: 8px; padding: 9px 12px; font-size: 12px;
+    margin-bottom: 14px; display: none; align-items: center; gap: 8px;
+  }
+  .alert-error.show { display: flex; }
+
+  .form-label { display: block; font-size: 9px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 5px; }
+  .form-input {
+    width: 100%; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+    border-radius: 8px; padding: 10px 12px; font-size: 13px; color: #fff; outline: none;
+    transition: border-color .2s; margin-bottom: 12px; font-family: inherit;
+  }
+  .form-input:focus { border-color: rgba(201,168,76,.5); background: rgba(255,255,255,.08); }
+  .form-input::placeholder { color: rgba(255,255,255,.25); }
+
+  .row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+  .remember { display: flex; align-items: center; gap: 6px; font-size: 11px; color: rgba(255,255,255,.45); cursor: pointer; user-select: none; }
+  .forgot { font-size: 11px; color: #e8c97a; cursor: pointer; }
+
+  .btn {
+    width: 100%; background: #c9a84c; color: #2a4f33; border: none;
+    border-radius: 8px; padding: 12px; font-size: 11px; font-weight: 500;
+    letter-spacing: .14em; text-transform: uppercase; cursor: pointer;
+    transition: background .2s, transform .15s; font-family: inherit;
+  }
+  .btn:hover { background: #e8c97a; transform: translateY(-1px); }
+
+  .success-screen { display: none; flex-direction: column; align-items: center; padding: 10px 0 4px; }
+  .success-screen.show { display: flex; }
+  .success-icon { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-size: 24px; }
+  .success-icon.admin { background: rgba(201,168,76,.18); border: 1px solid rgba(201,168,76,.35); }
+  .success-icon.client { background: rgba(58,107,68,.25); border: 1px solid rgba(58,107,68,.45); }
+  .success-title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .success-sub { font-size: 12px; color: rgba(255,255,255,.45); margin-bottom: 20px; text-align: center; }
+  .portal-preview {
+    width: 100%; border-radius: 10px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,.08);
+    margin-bottom: 16px;
+  }
+  .portal-header {
+    padding: 10px 14px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .portal-header.admin { background: rgba(201,168,76,.12); }
+  .portal-header.client { background: rgba(58,107,68,.2); }
+  .portal-hname { font-size: 12px; font-weight: 500; color: #fff; }
+  .portal-hrole { font-size: 9px; letter-spacing: .15em; text-transform: uppercase; }
+  .portal-hrole.admin { color: #e8c97a; }
+  .portal-hrole.client { color: rgba(100,200,130,.8); }
+  .portal-body { background: rgba(0,0,0,.2); padding: 12px 14px; }
+  .portal-row { display: flex; gap: 8px; margin-bottom: 8px; }
+  .pcard {
+    flex: 1; background: rgba(255,255,255,.05); border-radius: 6px; padding: 8px 10px;
+    border: 1px solid rgba(255,255,255,.07);
+  }
+  .pcard-label { font-size: 9px; color: rgba(255,255,255,.35); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 3px; }
+  .pcard-val { font-size: 15px; font-weight: 500; color: #fff; }
+  .pcard-val.gold { color: #e8c97a; }
+  .pcard-val.green { color: rgba(100,200,130,.9); }
+  .portal-item { background: rgba(255,255,255,.04); border-radius: 6px; padding: 8px 10px; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(255,255,255,.06); }
+  .portal-item-name { font-size: 11px; color: rgba(255,255,255,.7); }
+  .status-pill { font-size: 9px; padding: 2px 8px; border-radius: 100px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
+  .status-ok { background: rgba(37,211,102,.15); color: rgba(80,220,130,.9); }
+  .status-pend { background: rgba(201,168,76,.15); color: #e8c97a; }
+  .status-rev { background: rgba(100,149,237,.15); color: rgba(140,180,255,.9); }
+
+  .logout-btn {
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+    border-radius: 8px; padding: 8px 16px; color: rgba(255,255,255,.5);
+    font-size: 11px; cursor: pointer; font-family: inherit; transition: all .2s;
+  }
+  .logout-btn:hover { background: rgba(255,255,255,.1); color: #fff; }
+
+  .divider { height: 1px; background: rgba(255,255,255,.07); margin: 14px 0; }
+  .chips { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+  .chip {
+    display: flex; align-items: center; gap: 5px;
+    background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+    border-radius: 100px; padding: 3px 10px;
+    font-size: 10px; color: rgba(255,255,255,.3);
+  }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<div class="root">
+  <div class="topbar">
+    <div class="topbar-back">
+      <a href="index.html"> Voltar ao site</a>
+    </div>
+    <span class="topbar-label">Área Restrita</span>
+  </div>
+
+  <div class="wrapper">
+    <div class="card">
+
+      <div class="logo">
+        <div class="brand">Correia Quintella</div>
+        <div class="brand-sub">Assessoria &amp; Consultoria de Cidadanias</div>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="badge">
+        <i class="ti ti-lock" style="font-size:11px" aria-hidden="true"></i>
+        Área restrita para clientes
+      </div>
+
+      <div id="loginForm">
+        <div class="title">Acessar Conta</div>
+        <div class="subtitle">Acompanhe seu processo de cidadania</div>
+
+        <div style="margin-bottom:14px;">
+          <div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.35);text-align:center;margin-bottom:8px;">Testar como:</div>
+          <div class="mock-pills">
+            <div class="mpill" id="pill-admin" onclick="selectProfile('admin')">
+              <div class="mpill-icon">⚖️</div>
+              <div class="mpill-label">Admin</div>
+              <div class="mpill-hint">admin / admin123</div>
+            </div>
+            <div class="mpill" id="pill-cliente" onclick="selectProfile('cliente')">
+              <div class="mpill-icon">👤</div>
+              <div class="mpill-label">Cliente</div>
+              <div class="mpill-hint">joao.silva / senha123</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert-error" id="alertError">
+          <i class="ti ti-alert-circle" style="font-size:15px;flex-shrink:0" aria-hidden="true"></i>
+          <span id="alertMsg">Usuário ou senha incorretos.</span>
+        </div>
+
+        <div>
+          <label class="form-label" for="usuario">Usuário</label>
+          <input class="form-input" type="text" id="usuario" placeholder="Digite seu usuário">
+
+          <label class="form-label" for="senha">Senha</label>
+          <input class="form-input" type="password" id="senha" placeholder="Digite sua senha">
+
+          <div class="row">
+            <label class="remember">
+              <input type="checkbox" style="accent-color:#c9a84c"> Lembrar senha
+            </label>
+            <span class="forgot">Esqueceu a senha?</span>
+          </div>
+
+          <button class="btn" onclick="doLogin()">Entrar</button>
+        </div>
+
+        <div class="divider"></div>
+        <div class="chips">
+          <div class="chip">👤 Cliente</div>
+          <div class="chip">⚖️ Advogada</div>
+          <div class="chip">📋 Secretaria</div>
+        </div>
+      </div>
+
+      <div class="success-screen" id="successScreen">
+        <div class="success-icon" id="successIcon"></div>
+        <div class="success-title" id="successTitle"></div>
+        <div class="success-sub" id="successSub"></div>
+        <div class="portal-preview" id="portalPreview"></div>
+        <button class="logout-btn" onclick="doLogout()">
+          <i class="ti ti-logout" aria-hidden="true"></i> Sair da conta
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const USERS = {
+  'admin': { senha: 'admin123', role: 'admin', nome: 'Dra. Ana Quintella' },
+  'joao.silva': { senha: 'senha123', role: 'cliente', nome: 'João Silva' },
+};
+
+let selectedProfile = null;
+
+function selectProfile(p) {
+  selectedProfile = p;
+  document.getElementById('pill-admin').classList.toggle('active', p === 'admin');
+  document.getElementById('pill-cliente').classList.toggle('active', p === 'cliente');
+  if (p === 'admin') {
+    document.getElementById('usuario').value = 'admin';
+    document.getElementById('senha').value = 'admin123';
+  } else {
+    document.getElementById('usuario').value = 'joao.silva';
+    document.getElementById('senha').value = 'senha123';
+  }
+  document.getElementById('alertError').classList.remove('show');
+}
+
+function doLogin() {
+  const u = document.getElementById('usuario').value.trim();
+  const s = document.getElementById('senha').value;
+  const err = document.getElementById('alertError');
+
+  if (!u || !s) {
+    document.getElementById('alertMsg').textContent = 'Preencha usuário e senha.';
+    err.classList.add('show'); return;
+  }
+  const user = USERS[u];
+  if (!user || user.senha !== s) {
+    document.getElementById('alertMsg').textContent = 'Usuário ou senha incorretos.';
+    err.classList.add('show'); return;
+  }
+  err.classList.remove('show');
+  showPortal(user);
+}
+
+function showPortal(user) {
+  document.getElementById('loginForm').style.display = 'none';
+  const ss = document.getElementById('successScreen');
+  ss.classList.add('show');
+
+  const icon = document.getElementById('successIcon');
+  const title = document.getElementById('successTitle');
+  const sub = document.getElementById('successSub');
+  const preview = document.getElementById('portalPreview');
+
+  if (user.role === 'admin') {
+    icon.className = 'success-icon admin';
+    icon.textContent = '⚖️';
+    title.textContent = 'Bem-vinda, Dra. Ana!';
+    sub.textContent = 'Acesso ao painel administrativo';
+    preview.innerHTML = `
+      <div class="portal-header admin">
+        <span class="portal-hname">Portal Admin</span>
+        <span class="portal-hrole admin">Administradora</span>
+      </div>
+      <div class="portal-body">
+        <div class="portal-row">
+          <div class="pcard"><div class="pcard-label">Clientes</div><div class="pcard-val gold">34</div></div>
+          <div class="pcard"><div class="pcard-label">Processos</div><div class="pcard-val gold">61</div></div>
+          <div class="pcard"><div class="pcard-label">Concluídos</div><div class="pcard-val green">18</div></div>
+        </div>
+        <div class="portal-item"><span class="portal-item-name">Silva, João — Cidadania Italiana</span><span class="status-pill status-pend">Em andamento</span></div>
+        <div class="portal-item"><span class="portal-item-name">Costa, Maria — Cidadania Portuguesa</span><span class="status-pill status-rev">Em revisão</span></div>
+        <div class="portal-item"><span class="portal-item-name">Ferreira, Pedro — Cidadania Espanhola</span><span class="status-pill status-ok">Concluído</span></div>
+      </div>`;
+  } else {
+    icon.className = 'success-icon client';
+    icon.textContent = '👤';
+    title.textContent = 'Bem-vindo, João!';
+    sub.textContent = 'Acompanhe seu processo de cidadania';
+    preview.innerHTML = `
+      <div class="portal-header client">
+        <span class="portal-hname">Meu Portal</span>
+        <span class="portal-hrole client">Cliente</span>
+      </div>
+      <div class="portal-body">
+        <div class="portal-row">
+          <div class="pcard"><div class="pcard-label">Processo</div><div class="pcard-val" style="font-size:12px;color:rgba(255,255,255,.8)">Cidadania Italiana</div></div>
+          <div class="pcard"><div class="pcard-label">Status</div><div class="status-pill status-pend" style="display:inline-block;margin-top:4px">Em andamento</div></div>
+        </div>
+        <div class="portal-item"><span class="portal-item-name">📄 RG e CPF enviados</span><span class="status-pill status-ok">Aprovado</span></div>
+        <div class="portal-item"><span class="portal-item-name">📄 Certidão de nascimento</span><span class="status-pill status-ok">Aprovado</span></div>
+        <div class="portal-item"><span class="portal-item-name">📄 Árvore genealógica</span><span class="status-pill status-pend">Aguardando</span></div>
+        <div class="portal-item"><span class="portal-item-name">📄 Apostilamento dos docs</span><span class="status-pill status-rev">Em revisão</span></div>
+      </div>`;
+  }
+}
+
+function doLogout() {
+  document.getElementById('successScreen').classList.remove('show');
+  document.getElementById('loginForm').style.display = 'block';
+  document.getElementById('usuario').value = '';
+  document.getElementById('senha').value = '';
+  document.getElementById('pill-admin').classList.remove('active');
+  document.getElementById('pill-cliente').classList.remove('active');
+  selectedProfile = null;
+}
+
+document.getElementById('senha').addEventListener('keydown', e => {
+  if (e.key === 'Enter') doLogin();
+});
+</script>

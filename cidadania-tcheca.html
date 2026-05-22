@@ -9,28 +9,32 @@
 </head>
 <body>
 
-<!-- ═══ NAVBAR ═════════════════════════════════════════════ -->
+<!-- ═══ NAVBAR ══════════════════════════════════════════════ -->
 <nav class="navbar" id="navbar">
-  <a href="index.html" class="nav-logo">
+  <a href="#home" class="nav-logo">
     <span>Correia Quintella</span>
-    <span>Assessoria & Consultoria de Cidadanias</span>
+    <span class=" text-decoration-none">Assessoria & Consultoria de Cidadanias</span>
+    
   </a>
+
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#cidadania">Cidadania</a></li>
-    <li><a href="index.html#acompanhamento">Acompanhamento</a></li>
-    <li><a href="index.html#contato" class="nav-cta">Fale Conosco</a></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#cidadania">Cidadanias</a></li>
+    <li><a href="login.html">Acompanhar processo</a></li>
+    <li><a href="https://wa.me/556130460143" class="nav-cta" target="_blank" onclick="closeMobile()">Fale Conosco</a></li>
   </ul>
+
   <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
     <span></span><span></span><span></span>
   </div>
 </nav>
 
+<!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html"                onclick="closeMobile()">Home</a>
-  <a href="index.html#cidadania"      onclick="closeMobile()">Cidadania</a>
-  <a href="index.html#acompanhamento" onclick="closeMobile()">Acompanhamento</a>
-  <a href="index.html#contato"        onclick="closeMobile()">Fale Conosco</a>
+  <a href="#home"          onclick="closeMobile()">Home</a>
+  <a href="#cidadania"     onclick="closeMobile()">Cidadanias</a>
+  <a href="login.php" onclick="closeMobile()">Acompanhar processo</a>
+  <a href="https://wa.me/556130460143" target="_blank"  onclick="closeMobile()">Fale Conosco</a>
 </div>
 
 
@@ -41,8 +45,7 @@
 
     <a href="index.html#cidadania" class="cp-back">← Todas as cidadanias</a>
 
-    <p class="cp-eyebrow">
-      <span class="cp-flag">🇨🇿</span>
+    <p class="cp-eyebrow"></span>
       Assessoria Especializada
     </p>
 
@@ -128,7 +131,6 @@
   <div class="cp-modalities-grid">
 
     <div class="cp-modality-card">
-      <div class="cp-modality-icon">🩸</div>
       <div class="cp-modality-title">Por Descendência</div>
       <p class="cp-modality-text">
         A cidadania tcheca pode ser reconhecida a filhos, netos e, em determinadas
@@ -138,7 +140,6 @@
     </div>
 
     <div class="cp-modality-card">
-      <div class="cp-modality-icon">🏠</div>
       <div class="cp-modality-title">Por Naturalização</div>
       <p class="cp-modality-text">
         Estrangeiros residentes legalmente na República Tcheca podem requerer a
@@ -148,7 +149,6 @@
     </div>
 
     <div class="cp-modality-card">
-      <div class="cp-modality-icon">💍</div>
       <div class="cp-modality-title">Por Casamento</div>
       <p class="cp-modality-text">
         O casamento com cidadão tcheco pode facilitar o processo de naturalização,
@@ -231,27 +231,21 @@
 
   <div class="cp-benefits-grid">
     <div class="cp-benefit-item">
-      <div class="cp-benefit-icon">🇪🇺</div>
       <p class="cp-benefit-text">Direito de residir, trabalhar e estudar na República Tcheca e em todos os países da União Europeia</p>
     </div>
     <div class="cp-benefit-item">
-      <div class="cp-benefit-icon">✈️</div>
       <p class="cp-benefit-text">Livre circulação pelo Espaço Schengen com acesso facilitado a dezenas de países</p>
     </div>
     <div class="cp-benefit-item">
-      <div class="cp-benefit-icon">🏥</div>
       <p class="cp-benefit-text">Acesso a sistemas públicos de saúde e educação de alta qualidade</p>
     </div>
     <div class="cp-benefit-item">
-      <div class="cp-benefit-icon">👨‍👩‍👧</div>
       <p class="cp-benefit-text">Possibilidade de transmitir a cidadania aos descendentes e perpetuar o direito familiar</p>
     </div>
     <div class="cp-benefit-item">
-      <div class="cp-benefit-icon">📗</div>
       <p class="cp-benefit-text">Obtenção do passaporte tcheco e acesso a todos os benefícios da cidadania europeia</p>
     </div>
     <div class="cp-benefit-item">
-      <div class="cp-benefit-icon">💼</div>
       <p class="cp-benefit-text">Ampliação de oportunidades acadêmicas, profissionais e empresariais em toda a Europa</p>
     </div>
   </div>
@@ -266,12 +260,12 @@
   <h2 class="cp-section-title">Documentos Necessários</h2>
 
   <div class="cp-docs-grid">
-    <div class="cp-doc-item"><div class="cp-doc-icon">📄</div>Certidões de nascimento, casamento e óbito dos ascendentes tchecos</div>
-    <div class="cp-doc-item"><div class="cp-doc-icon">📋</div>Documentos comprobatórios da cidadania ou origem tcheca do antepassado</div>
-    <div class="cp-doc-item"><div class="cp-doc-icon">🗂️</div>Registros civis e históricos nacionais e internacionais</div>
-    <div class="cp-doc-item"><div class="cp-doc-icon">📜</div>Documentos pessoais do requerente devidamente atualizados</div>
-    <div class="cp-doc-item"><div class="cp-doc-icon">🌍</div>Traduções juramentadas de todos os documentos estrangeiros</div>
-    <div class="cp-doc-item"><div class="cp-doc-icon">✒️</div>Apostilamento dos documentos conforme exigência das autoridades</div>
+    <div class="cp-doc-item">Certidões de nascimento, casamento e óbito dos ascendentes tchecos</div>
+    <div class="cp-doc-item">Documentos comprobatórios da cidadania ou origem tcheca do antepassado</div>
+    <div class="cp-doc-item">Registros civis e históricos nacionais e internacionais</div>
+    <div class="cp-doc-item">Documentos pessoais do requerente devidamente atualizados</div>
+    <div class="cp-doc-item">Traduções juramentadas de todos os documentos estrangeiros</div>
+    <div class="cp-doc-item">Apostilamento dos documentos conforme exigência das autoridades</div>
   </div>
 
 </section>
@@ -288,37 +282,39 @@
   </p>
 
   <div class="cp-services-grid">
-    <div class="cp-service-item"><span class="cp-service-check">✓</span> Análise de elegibilidade</div>
-    <div class="cp-service-item"><span class="cp-service-check">✓</span> Pesquisa genealógica internacional</div>
-    <div class="cp-service-item"><span class="cp-service-check">✓</span> Localização de registros históricos</div>
-    <div class="cp-service-item"><span class="cp-service-check">✓</span> Organização e regularização documental</div>
-    <div class="cp-service-item"><span class="cp-service-check">✓</span> Traduções juramentadas e apostilamento</div>
-    <div class="cp-service-item"><span class="cp-service-check">✓</span> Protocolo e acompanhamento do processo</div>
-    <div class="cp-service-item"><span class="cp-service-check">✓</span> Retificações de registros civis</div>
-    <div class="cp-service-item"><span class="cp-service-check">✓</span> Estratégia jurídica personalizada</div>
+    <div class="cp-service-item">Análise de elegibilidade</div>
+    <div class="cp-service-item">Pesquisa genealógica internacional</div>
+    <div class="cp-service-item">Localização de registros históricos</div>
+    <div class="cp-service-item">Organização e regularização documental</div>
+    <div class="cp-service-item">Traduções juramentadas e apostilamento</div>
+    <div class="cp-service-item">Protocolo e acompanhamento do processo</div>
+    <div class="cp-service-item">Retificações de registros civis</div>
+    <div class="cp-service-item">Estratégia jurídica personalizada</div>
   </div>
 
 </section>
+
 
 <!-- ═══ CTA ══════════════════════════════════════════════════ -->
 <section class="cp-cta">
   <h2 class="cp-cta-title">Inicie sua análise de elegibilidade</h2>
   <p class="cp-cta-sub">Cada caso é único. Descubra se você tem direito à cidadania tcheca.</p>
-   <a href="https://wa.me/5500000000000" class="cp-cta-btn" target="_blank" rel="noopener">
-    Consulta pelo WhatsApp
-  </a>
+  <a href="index.html#contato" class="cp-cta-btn">Fale com um especialista →</a>
 </section>
 
 
 <!-- ═══ FOOTER ════════════════════════════════════════════════ -->
 <footer id="contato">
   <div class="footer-grid">
+    <!-- Brand column -->
     <div class="footer-brand">
       <div class="brand-name">Correia Quintella</div>
       <div class="brand-sub">Assessoria & Consultoria de Cidadanias</div>
       <p>Ajudamos brasileiros a descobrir e reconhecer sua herança europeia, com rigor jurídico e pesquisa genealógica especializada.</p>
       <div class="footer-flags">🇧🇷 🇵🇹 🇮🇹 🇪🇸 🇩🇪 🇦🇹 🇨🇿 🇨🇭 🇵🇱 🇫🇷</div>
     </div>
+
+    <!-- Serviços -->
     <div class="footer-col">
       <h4>Cidadanias</h4>
       <ul>
@@ -331,30 +327,33 @@
         <li><a href="cidadania-suica.html">Cidadania Suíça</a></li>
         <li><a href="cidadania-polonesa.html">Cidadania Polonesa</a></li>
         <li><a href="cidadania-francesa.html">Cidadania Francesa</a></li>
+        <li><a href="#">Pesquisa Genealógica</a></li>
       </ul>
     </div>
+
+    <!-- Empresa -->
     <div class="footer-col">
       <h4>Empresa</h4>
       <ul>
-        <li><a href="#">Quem somos</a></li>
-        <li><a href="#">Nossa equipe</a></li>
-        <li><a href="#">Depoimentos</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Parceiros</a></li>
+        <li><a href="#equipe">Quem somos</a></li>
+        <li><a href="#equipe">Nossa equipe</a></li>
       </ul>
     </div>
+
+    <!-- Contato -->
     <div class="footer-col">
       <h4>Contato</h4>
       <ul>
-        <li><a href="#">WhatsApp</a></li>
-        <li><a href="#">E-mail</a></li>
-        <li><a href="#">Agendar consulta</a></li>
-        <li><a href="#">Acompanhar processo</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><a href="https://wa.me/556130460143" target="_blank">WhatsApp</a></li>
+        <li><a href="mailto:contato@cqcidadania.com.br">contato@cqcidadania.com.br</a></li>
+        <li><a  href="https://wa.me/556130460143" target="_blank">Agendar consulta</a></li>
+        <li><a href="login.html">Acompanhar processo</a></li>
       </ul>
     </div>
   </div>
+
   <div class="footer-divider"></div>
+
   <div class="footer-bottom">
     <p>© 2025 Correia Quintella Assessoria & Consultoria de Cidadanias. Todos os direitos reservados.</p>
     <div class="footer-bottom-links">
@@ -362,6 +361,7 @@
       <a href="#">Termos de Uso</a>
     </div>
   </div>
+
   <div class="footer-gold-line"></div>
 </footer>
 
