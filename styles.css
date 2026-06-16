@@ -3029,3 +3029,59 @@ footer::after {
   .nav-dropdown-menu { display: none; }
 }
 
+
+/* ─── VISTOS REGION LABELS ─────────────────────────────────── */
+.vistos-region-label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 52px 0 28px;
+}
+
+.vistos-region-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4), transparent);
+}
+
+.vistos-region-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
+  padding: 4px 14px;
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 100px;
+  background: rgba(201,168,76,0.06);
+}
+
+/* ─── SCHENGEN NOTE ─────────────────────────────────────────── */
+.vistos-schengen-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(58,107,68,0.06);
+  border: 1px solid rgba(58,107,68,0.15);
+  border-left: 3px solid var(--green);
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-bottom: 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: var(--text-mid);
+  line-height: 1.55;
+}
+
+.vistos-schengen-note svg {
+  color: var(--green);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@media (max-width: 700px) {
+  .vistos-region-label { margin: 36px 0 20px; }
+  .vistos-schengen-note { font-size: 12px; }
+}
