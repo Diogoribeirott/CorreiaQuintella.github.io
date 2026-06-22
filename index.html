@@ -6,24 +6,22 @@
   <title>Correia Quintella – Cidadania</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 </head>
 <body>
 
 <!-- ═══ NAVBAR ══════════════════════════════════════════════ -->
 <nav class="navbar" id="navbar">
   <a href="#home" class="nav-logo">
-    <span>Correia Quintella</span>
-    <span class=" text-decoration-none">Assessoria & Consultoria de Cidadanias</span>
-    
+    <img src="correia-quintella-logo.png" alt="Correia Quintella – Assessoria & Consultoria de Cidadanias" class="nav-logo-img">
   </a>
 
   <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
     <li><a href="#cidadania">Cidadanias</a></li>
+    <li><a href="/noticias.html">noticias</a></li>
     <li><a href="#vistos">Vistos</a></li>
-    <li><a href="#localizacao">Localização</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
     <li><a href="login.html">Acompanhar processo</a></li>
-    <li><a href="https://wa.me/556130460143" class="nav-cta" target="_blank" onclick="closeMobile()">Fale Conosco</a></li>
   </ul>
 
   <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
@@ -36,6 +34,7 @@
   <a href="#home"          onclick="closeMobile()">Home</a>
   <a href="#cidadania"     onclick="closeMobile()">Cidadanias</a>
   <a href="#vistos"        onclick="closeMobile()">Vistos</a>
+  <a href="#depoimentos"   onclick="closeMobile()">Depoimentos</a>
   <a href="#localizacao"   onclick="closeMobile()">Localização</a>
   <a href="login.php" onclick="closeMobile()">Acompanhar processo</a>
   <a href="https://wa.me/556130460143" target="_blank"  onclick="closeMobile()">Fale Conosco</a>
@@ -62,16 +61,7 @@
       </p>
 
       <div class="hero-flags">
-        <div class="flag-chip"><img src="https://flagcdn.com/h20/it.png" width="20" height="10" alt="IT flag" style="vertical-align:middle;border-radius:2px;"> Italiana</div>
-        <div class="flag-chip"><img src="https://flagcdn.com/h20/pt.png" width="20" height="10" alt="PT flag" style="vertical-align:middle;border-radius:2px;"> Portuguesa</div>
-        <div class="flag-chip"><img src="https://flagcdn.com/h20/es.png" width="20" height="10" alt="ES flag" style="vertical-align:middle;border-radius:2px;"> Espanhola</div>
-        <div class="flag-chip"><img src="https://flagcdn.com/h20/de.png" width="20" height="10" alt="DE flag" style="vertical-align:middle;border-radius:2px;"> Alemã</div>
-        <div class="flag-chip"><img src="https://flagcdn.com/h20/at.png" width="20" height="10" alt="AT flag" style="vertical-align:middle;border-radius:2px;"> Austríaca</div>
-        <div class="flag-chip"><img src="https://flagcdn.com/h20/cz.png" width="20" height="10" alt="CZ flag" style="vertical-align:middle;border-radius:2px;"> Tcheca</div>
-        <div class="flag-chip"><img src="https://flagcdn.com/h20/ch.png" width="20" height="10" alt="CH flag" style="vertical-align:middle;border-radius:2px;"> Suíça</div>
-        <div class="flag-chip"><img src="https://flagcdn.com/h20/pl.png" width="20" height="10" alt="PL flag" style="vertical-align:middle;border-radius:2px;"> Polonesa</div>
-        <div class="flag-chip"><img src="https://flagcdn.com/h20/fr.png" width="20" height="10" alt="FR flag" style="vertical-align:middle;border-radius:2px;"> Francesa</div>
-         <div class="flag-chip"><img src="https://flagcdn.com/h20/hu.png" width="20" height="10" alt="HU flag" style="vertical-align:middle;border-radius:2px;"> Húngara</div>
+        
       </div>
 
    
@@ -172,7 +162,6 @@
     <a class="citizenship-card cc-photo-card" href="cidadania-italiana.html" style="--cc-bg: url('https://images.unsplash.com/photo-1529260830199-42c24126f198?w=800&q=80')">
       <div class="cc-photo-overlay"></div>
       <div class="cc-photo-content">
-        <div class="cc-flag"><img src="https://flagcdn.com/h40/it.png" width="40" height="20" alt="IT flag" style="vertical-align:middle;border-radius:2px;"></div>
         <div class="cc-country">Italiana</div>
         <div class="cc-tagline">Via judicial ou consular</div>
         <ul class="cc-tags">
@@ -188,7 +177,6 @@
     <a class="citizenship-card cc-photo-card" href="cidadania-portuguesa.html" style="--cc-bg: url('https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?w=800&q=80')">
       <div class="cc-photo-overlay"></div>
       <div class="cc-photo-content">
-        <div class="cc-flag"><img src="https://flagcdn.com/h40/pt.png" width="40" height="20" alt="PT flag" style="vertical-align:middle;border-radius:2px;"></div>
         <div class="cc-country">Portuguesa</div>
         <div class="cc-tagline">Por descendência ou naturalização</div>
         <ul class="cc-tags">
@@ -204,7 +192,6 @@
     <a class="citizenship-card cc-photo-card" href="cidadania-espanhola.html" style="--cc-bg: url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&q=80')">
       <div class="cc-photo-overlay"></div>
       <div class="cc-photo-content">
-        <div class="cc-flag"><img src="https://flagcdn.com/h40/es.png" width="40" height="20" alt="ES flag" style="vertical-align:middle;border-radius:2px;"></div>
         <div class="cc-country">Espanhola</div>
         <div class="cc-tagline">Lei da Memória Democrática</div>
         <ul class="cc-tags">
@@ -220,7 +207,6 @@
     <a class="citizenship-card cc-photo-card" href="cidadania-alema.html" style="--cc-bg: url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80')">
       <div class="cc-photo-overlay"></div>
       <div class="cc-photo-content">
-        <div class="cc-flag"><img src="https://flagcdn.com/h40/de.png" width="40" height="20" alt="DE flag" style="vertical-align:middle;border-radius:2px;"></div>
         <div class="cc-country">Alemã</div>
         <div class="cc-tagline">Por descendência ou Art. 116</div>
         <ul class="cc-tags">
@@ -236,7 +222,6 @@
     <a class="citizenship-card cc-photo-card" href="cidadania-austriaca.html" style="--cc-bg: url('https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=800&q=80')">
       <div class="cc-photo-overlay"></div>
       <div class="cc-photo-content">
-        <div class="cc-flag"><img src="https://flagcdn.com/h40/at.png" width="40" height="20" alt="AT flag" style="vertical-align:middle;border-radius:2px;"></div>
         <div class="cc-country">Austríaca</div>
         <div class="cc-tagline">Descendência ou restituição nazista</div>
         <ul class="cc-tags">
@@ -252,7 +237,6 @@
     <a class="citizenship-card cc-photo-card" href="cidadania-tcheca.html" style="--cc-bg: url('https://images.unsplash.com/photo-1541849546-216549ae216d?w=800&q=80')">
       <div class="cc-photo-overlay"></div>
       <div class="cc-photo-content">
-        <div class="cc-flag"><img src="https://flagcdn.com/h40/cz.png" width="40" height="20" alt="CZ flag" style="vertical-align:middle;border-radius:2px;"></div>
         <div class="cc-country">Tcheca</div>
         <div class="cc-tagline">Por descendência ou naturalização</div>
         <ul class="cc-tags">
@@ -268,7 +252,6 @@
     <a class="citizenship-card cc-photo-card" href="cidadania-suica.html" style="--cc-bg: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80')">
       <div class="cc-photo-overlay"></div>
       <div class="cc-photo-content">
-        <div class="cc-flag"><img src="https://flagcdn.com/h40/ch.png" width="40" height="20" alt="CH flag" style="vertical-align:middle;border-radius:2px;"></div>
         <div class="cc-country">Suíça</div>
         <div class="cc-tagline">Por descendência ou naturalização</div>
         <ul class="cc-tags">
@@ -284,7 +267,6 @@
 <a class="citizenship-card cc-photo-card" href="cidadania-polonesa.html" style="--cc-bg: url('https://images.unsplash.com/photo-1519197924294-4ba991a11128?w=800&q=80')">
   <div class="cc-photo-overlay"></div>
   <div class="cc-photo-content">
-    <div class="cc-flag"><img src="https://flagcdn.com/h40/pl.png" width="40" height="20" alt="PL flag" style="vertical-align:middle;border-radius:2px;"></div>
     <div class="cc-country">Polonesa</div>
     <div class="cc-tagline">Jus sanguinis sem limite de gerações</div>
     <ul class="cc-tags">
@@ -299,7 +281,6 @@
     <a class="citizenship-card cc-photo-card" href="cidadania-francesa.html" style="--cc-bg: url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80')">
       <div class="cc-photo-overlay"></div>
       <div class="cc-photo-content">
-        <div class="cc-flag"><img src="https://flagcdn.com/h40/fr.png" width="40" height="20" alt="FR flag" style="vertical-align:middle;border-radius:2px;"></div>
         <div class="cc-country">Francesa</div>
         <div class="cc-tagline">Por descendência ou naturalização</div>
         <ul class="cc-tags">
@@ -315,7 +296,6 @@
     <a class="citizenship-card cc-photo-card" href="cidadania-hungara.html" style="--cc-bg: url('https://images.unsplash.com/photo-1570183896560-f10ea94f6a1f?w=800&q=80')">
       <div class="cc-photo-overlay"></div>
       <div class="cc-photo-content">
-        <div class="cc-flag"><img src="https://flagcdn.com/h40/hu.png" width="40" height="20" alt="HU flag" style="vertical-align:middle;border-radius:2px;"></div>
         <div class="cc-country">Húngara</div>
         <div class="cc-tagline">Por descendência ou reenraizamento</div>
         <ul class="cc-tags">
@@ -342,7 +322,6 @@
     <a class="citizenship-card cc-photo-card" href="cidadania-canadense.html" style="--cc-bg: url('https://images.unsplash.com/photo-1517935706615-2717063c2225?w=800&q=80')">
       <div class="cc-photo-overlay"></div>
       <div class="cc-photo-content">
-        <div class="cc-flag"><img src="https://flagcdn.com/h40/ca.png" width="40" height="20" alt="CA flag" style="vertical-align:middle;border-radius:2px;"></div>
         <div class="cc-country">Canadense</div>
         <div class="cc-tagline">Por descendência · Bill C-3</div>
         <ul class="cc-tags">
@@ -358,7 +337,6 @@
     <a class="citizenship-card cc-photo-card" href="cidadania-americana.html" style="--cc-bg: url('https://images.unsplash.com/photo-1501466044931-62695aada8e9?w=800&q=80')">
       <div class="cc-photo-overlay"></div>
       <div class="cc-photo-content">
-        <div class="cc-flag"><img src="https://flagcdn.com/h40/us.png" width="40" height="20" alt="US flag" style="vertical-align:middle;border-radius:2px;"></div>
         <div class="cc-country">Americana</div>
         <div class="cc-tagline">Por nascimento ou descendência</div>
         <ul class="cc-tags">
@@ -381,9 +359,6 @@
 
   <div class="naturalizacao-wrapper">
     <a class="naturalizacao-card" href="naturalizacao-brasileira.html">
-      <div class="nat-flag-col">
-        <img src="https://flagcdn.com/h60/br.png" width="60" height="30" alt="BR flag" style="border-radius:3px;">
-      </div>
       <div class="nat-content">
         <div class="nat-badge">Naturalização · Não é cidadania por sangue</div>
         <div class="nat-title">Naturalização Brasileira</div>
@@ -420,26 +395,23 @@
       </h2>
 
       <p class="team-description">
-        Especialista em assessoria de cidadania europeia,
-        Narayana Correia Quintella atua oferecendo suporte
-        estratégico e acompanhamento personalizado em
-        processos de reconhecimento de cidadania italiana,
-        portuguesa e espanhola.
+       Especialista em assessoria de cidadania europeia, Narayana Correia Quintella atua oferecendo suporte estratégico e acompanhamento personalizado em processos de reconhecimento de cidadania italiana, portuguesa e espanhola.
       </p>
 
       <p class="team-description">
-        Com atendimento humanizado e foco em excelência,
-        lidera a Correia Quintella com compromisso,
-        transparência e segurança jurídica em todas as etapas
-        do processo.
-      </p>
+        À frente da Correia Quintella, com escritórios em Brasília (DF), Brasil, e em Boston (MA), Estados Unidos, lidera uma estrutura internacional que atende clientes no Brasil e no exterior com a mesma excelência e proximidade.
 
+      </p>
+        <p class="team-description">
+          Com atendimento humanizado e foco em excelência, lidera a Correia Quintella com compromisso, transparência e segurança jurídica em todas as etapas do processo.
+      </p>
+    
       <ul class="team-list">
-        <li>✔ Atendimento personalizado</li>
-        <li>✔ Especialista em cidadania europeia</li>
-        <li>✔ Suporte documental completo</li>
-        <li>✔ Acompanhamento estratégico</li>
-        <li>✔ Atendimento nacional e internacional</li>
+        <li>Atendimento personalizado</li>
+        <li>Especialista em cidadania europeia</li>
+        <li>Suporte documental completo</li>
+        <li>Acompanhamento estratégico</li>
+        <li>Atendimento nacional e internacional</li>
       </ul>
 
       <a href="https://wa.me/556130460143" target="_blank" class="team-btn">
@@ -451,6 +423,99 @@
   </div>
 
 </section>
+
+<!-- ═══ DEPOIMENTOS / AVALIAÇÕES ════════════════════════════ -->
+<section class="testimonials-section" id="depoimentos">
+
+  <div class="testimonials-header">
+    <p class="testimonials-eyebrow">Histórias Reais</p>
+    <h2 class="testimonials-title">Quem Confiou, Conquistou</h2>
+    <p class="testimonials-subtitle">
+      Famílias que reconheceram sua cidadania europeia com o nosso acompanhamento —
+      do primeiro documento ao passaporte na mão.
+    </p>
+  </div>
+
+  <div class="testimonials-grid">
+
+    <!-- ── DEPOIMENTO 1 ── -->
+    <div class="testimonial-card">
+      <div class="testimonial-photo">
+        <img src="https://placehold.co/500x500/2a4f33/e8c97a?text=Foto+da+Fam%C3%ADlia" alt="Família Bianchi — cidadania italiana reconhecida">
+        <span class="testimonial-flag"><img src="https://flagcdn.com/h40/it.png" width="28" height="14" alt="IT flag"></span>
+      </div>
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-quote">
+        Depois de gerações esperando, finalmente vimos nossa cidadania italiana reconhecida.
+        A equipe cuidou de cada documento com uma atenção que nos deixou tranquilos do início ao fim.
+      </p>
+      <div class="testimonial-author">
+        <span class="testimonial-name">Família Bianchi</span>
+        <span class="testimonial-role">Cidadania Italiana reconhecida</span>
+      </div>
+    </div>
+
+    <!-- ── DEPOIMENTO 2 ── -->
+    <div class="testimonial-card">
+      <div class="testimonial-photo">
+        <img src="https://placehold.co/500x500/3a6b44/f5efe6?text=Foto+do+Cliente" alt="Cliente com passaporte português">
+        <span class="testimonial-flag"><img src="https://flagcdn.com/h40/pt.png" width="28" height="14" alt="PT flag"></span>
+      </div>
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-quote">
+        Achei que seria impossível por causa da papelada do meu avô, mas a Correia Quintella
+        encontrou um caminho. Hoje tenho meu passaporte português e já estou planejando a mudança.
+      </p>
+      <div class="testimonial-author">
+        <span class="testimonial-name">Renata Almeida</span>
+        <span class="testimonial-role">Cidadania Portuguesa reconhecida</span>
+      </div>
+    </div>
+
+    <!-- ── DEPOIMENTO 3 ── -->
+    <div class="testimonial-card">
+      <div class="testimonial-photo">
+        <img src="https://placehold.co/500x500/2a4f33/c9a84c?text=Foto+da+Fam%C3%ADlia" alt="Família com cidadania espanhola reconhecida">
+        <span class="testimonial-flag"><img src="https://flagcdn.com/h40/es.png" width="28" height="14" alt="ES flag"></span>
+      </div>
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-quote">
+        Toda a família conseguiu a cidadania espanhola pela Lei da Memória Democrática.
+        Processo claro, prazos respeitados e um suporte humano que fez toda a diferença.
+      </p>
+      <div class="testimonial-author">
+        <span class="testimonial-name">Família Torres</span>
+        <span class="testimonial-role">Cidadania Espanhola reconhecida</span>
+      </div>
+    </div>
+
+    <!-- ── DEPOIMENTO 4 ── -->
+    <div class="testimonial-card">
+      <div class="testimonial-photo">
+        <img src="https://placehold.co/500x500/3a6b44/e8c97a?text=Foto+do+Cliente" alt="Cliente com cidadania alemã reconhecida">
+        <span class="testimonial-flag"><img src="https://flagcdn.com/h40/de.png" width="28" height="14" alt="DE flag"></span>
+      </div>
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-quote">
+        A pesquisa genealógica encontrou documentos que nem sabíamos que existiam.
+        Em poucos meses recebi a confirmação da minha cidadania alemã. Recomendo de olhos fechados.
+      </p>
+      <div class="testimonial-author">
+        <span class="testimonial-name">Eduardo Fischer</span>
+        <span class="testimonial-role">Cidadania Alemã reconhecida</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="testimonials-cta-wrap">
+    <a href="https://wa.me/556137020143" target="_blank" class="testimonials-cta-btn">
+      Quero Minha Cidadania Também
+    </a>
+  </div>
+
+</section>
+
 
 <!-- ═══ ASSESSORIA COMPLETA ══════════════════════════════════ -->
 <section class="cp-services">
@@ -789,8 +854,15 @@
     <p class="map-eyebrow">Onde Estamos</p>
     <h2 class="map-title">Nossa Localização</h2>
     <p class="map-subtitle">
-      Atendemos presencialmente em Brasília e de forma remota em todo o Brasil e no exterior.
+      Estrutura internacional com presença no Brasil e nos Estados Unidos,
+      atendendo clientes em todo o mundo de forma presencial e remota.
     </p>
+  </div>
+
+  <!-- ── FILIAL: BRASÍLIA (matriz) ── -->
+  <div class="map-branch-label">
+    <span class="map-branch-flag"><img src="https://flagcdn.com/h20/br.png" width="20" height="10" alt="BR flag" style="border-radius:2px;"></span>
+    Brasília, DF — Brasil
   </div>
 
   <div class="map-wrapper">
@@ -815,6 +887,15 @@
       </div>
       <div class="map-info-item">
         <div class="map-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+        </div>
+        <div class="map-info-text">
+          <strong>WhatsApp</strong>
+          <span>+55 61 3702-0143</span>
+        </div>
+      </div>
+      <div class="map-info-item">
+        <div class="map-info-icon">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg>
         </div>
         <div class="map-info-text">
@@ -828,10 +909,10 @@
         </div>
         <div class="map-info-text">
           <strong>Atendimento</strong>
-          <span>Seg – Sex: 9h às 18h</span>
+          <span>Seg – Sex: 8:30h às 17:30h</span>
         </div>
       </div>
-      <a href="https://wa.me/556130460143" target="_blank" class="map-cta-btn">
+      <a href="https://wa.me/556137020143" target="_blank" class="map-cta-btn">
         Agendar Consulta
       </a>
     </div>
@@ -849,6 +930,60 @@
       </iframe>
     </div>
   </div>
+
+  <!-- ── FILIAL: BOSTON, MA (EUA) ── -->
+  <div class="map-branch-label" style="margin-top:56px;">
+    <span class="map-branch-flag"><img src="https://flagcdn.com/h20/us.png" width="20" height="10" alt="US flag" style="border-radius:2px;"></span>
+    Boston, MA — Estados Unidos
+  </div>
+
+  <div class="map-wrapper">
+    <div class="map-info-card">
+      <div class="map-info-item">
+        <div class="map-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
+        </div>
+        <div class="map-info-text">
+          <strong>Endereço</strong>
+          <span>Boston – MA, Estados Unidos</span>
+        </div>
+      </div>
+      <div class="map-info-item">
+        <div class="map-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg>
+        </div>
+        <div class="map-info-text">
+          <strong>Empresa</strong>
+          <span>Correia Quintella Citizenship Advisory &amp; Consulting LLC</span>
+        </div>
+      </div>
+      <div class="map-info-item">
+        <div class="map-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="currentColor"/></svg>
+        </div>
+        <div class="map-info-text">
+          <strong>Registro</strong>
+          <span>Massachusetts LLC · Est. 17/03/2026</span>
+        </div>
+      </div>
+      <a href="https://wa.me/556137020143" target="_blank" class="map-cta-btn">
+        Agendar Consulta
+      </a>
+    </div>
+
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d188921.95!2d-71.20!3d42.36!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e370a9a9a4b1c1%3A0x80aabb0e0e0e0e0e!2sBoston%2C%20MA!5e0!3m2!1spt-BR!2sus!4v1716000000001!5m2!1spt-BR!2sus"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localização Correia Quintella – Boston MA">
+      </iframe>
+    </div>
+  </div>
 </section>
 
 <!-- ═══ FOOTER ════════════════════════════════════════════════ -->
@@ -859,7 +994,7 @@
       <div class="brand-name">Correia Quintella</div>
       <div class="brand-sub">Assessoria & Consultoria de Cidadanias</div>
       <p>Ajudamos brasileiros a descobrir e reconhecer sua herança europeia, com rigor jurídico e pesquisa genealógica especializada.</p>
-      <div class="footer-flags"><img src="https://flagcdn.com/h20/br.png" width="20" height="10" alt="BR flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/pt.png" width="20" height="10" alt="PT flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/it.png" width="20" height="10" alt="IT flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/es.png" width="20" height="10" alt="ES flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/de.png" width="20" height="10" alt="DE flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/at.png" width="20" height="10" alt="AT flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/cz.png" width="20" height="10" alt="CZ flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/ch.png" width="20" height="10" alt="CH flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/pl.png" width="20" height="10" alt="PL flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/fr.png" width="20" height="10" alt="FR flag" style="vertical-align:middle;border-radius:2px;"></div>
+      <div class="footer-flags"><img src="https://flagcdn.com/h20/pt.png" width="20" height="10" alt="PT flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/it.png" width="20" height="10" alt="IT flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/es.png" width="20" height="10" alt="ES flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/de.png" width="20" height="10" alt="DE flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/at.png" width="20" height="10" alt="AT flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/cz.png" width="20" height="10" alt="CZ flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/ch.png" width="20" height="10" alt="CH flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/pl.png" width="20" height="10" alt="PL flag" style="vertical-align:middle;border-radius:2px;"> <img src="https://flagcdn.com/h20/fr.png" width="20" height="10" alt="FR flag" style="vertical-align:middle;border-radius:2px;"></div>
     </div>
 
     <!-- Serviços -->
@@ -893,9 +1028,9 @@
     <div class="footer-col">
       <h4>Contato</h4>
       <ul>
-        <li><a href="https://wa.me/556130460143" target="_blank">WhatsApp</a></li>
+        <li><a href="https://wa.me/556137020143" target="_blank">WhatsApp</a></li>
         <li><a href="mailto:contato@cqcidadania.com.br">contato@cqcidadania.com.br</a></li>
-        <li><a  href="https://wa.me/556130460143" target="_blank">Agendar consulta</a></li>
+        <li><a  href="https://wa.me/556137020143" target="_blank">Agendar consulta</a></li>
         <li><a href="login.html">Acompanhar processo</a></li>
       </ul>
     </div>
@@ -916,7 +1051,7 @@
 
 
 <!-- ═══ WHATSAPP FLOAT ══════════════════════════════════════ -->
-<a class="whatsapp-float" href="https://wa.me/556130460143" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+<a class="whatsapp-float" href="https://wa.me/556137020143" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
   <div class="wa-icon">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </div>

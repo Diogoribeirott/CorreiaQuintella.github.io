@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notícias – Correia Quintella</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --green:       #3a6b44;
+      --green-dark:  #2a4f33;
+      --green-light: #4e8a5a;
+      --cream:       #f5efe6;
+      --parchment:   #e8dcc8;
+      --gold:        #c9a84c;
+      --gold-light:  #e8c97a;
+      --text-dark:   #1a1a1a;
+      --text-mid:    #4a4a4a;
+      --white:       #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* ── NAVBAR (mesma do site) ── */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 80px;
+      background: var(--green);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--gold-light); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      font-size: 0.88rem;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+
+    /* ══════════════════════════════════════════════
+       SEÇÃO DE NOTÍCIAS — BLOCO DA HOMEPAGE
+    ══════════════════════════════════════════════ */
+    .news-section {
+      padding: 96px 48px 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .news-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 52px;
+    }
+
+    .news-eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .news-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      color: var(--green-dark);
+      line-height: 1.15;
+    }
+
+    .news-title em {
+      font-style: italic;
+      color: var(--green);
+    }
+
+    .news-see-all {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--green);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 2px;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .news-see-all:hover { color: var(--gold); border-color: var(--gold-light); }
+    .news-see-all svg { transition: transform 0.2s; }
+    .news-see-all:hover svg { transform: translateX(4px); }
+
+    /* ── GRID DE CARDS ── */
+    .news-grid {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 24px;
+    }
+
+    /* Card destacado (primeiro, ocupa duas linhas) */
+    .news-card {
+      background: var(--white);
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.25s, transform 0.25s;
+      border: 1px solid rgba(201,168,76,0.12);
+      text-decoration: none;
+      color: inherit;
+    }
+    .news-card:hover {
+      box-shadow: 0 12px 48px rgba(42,79,51,0.14);
+      transform: translateY(-3px);
+    }
+
+    .news-card.featured {
+      grid-row: 1 / 3;
+    }
+
+    .news-card-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      background: var(--parchment);
+    }
+
+    .news-card.featured .news-card-img {
+      aspect-ratio: 4/3;
+      flex-shrink: 0;
+    }
+
+    /* Placeholder SVG quando não há imagem */
+    .news-card-img-placeholder {
+      width: 100%;
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .news-card.featured .news-card-img-placeholder { aspect-ratio: 4/3; }
+    .news-card:not(.featured) .news-card-img-placeholder { aspect-ratio: 16/9; }
+
+    .news-card-img-placeholder svg {
+      opacity: 0.22;
+      width: 56px;
+      height: 56px;
+    }
+
+    .news-card-body {
+      padding: 24px 26px 28px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .news-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .news-card-tag {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: var(--green);
+      color: var(--white);
+      padding: 3px 9px;
+      border-radius: 2px;
+    }
+
+    .news-card-date {
+      font-size: 0.73rem;
+      color: var(--text-mid);
+      letter-spacing: 0.03em;
+    }
+
+    .news-card-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .news-card.featured .news-card-title { font-size: 1.35rem; }
+    .news-card:not(.featured) .news-card-title { font-size: 1rem; }
+
+    .news-card-excerpt {
+      font-size: 0.84rem;
+      color: var(--text-mid);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .news-card.featured .news-card-excerpt { font-size: 0.9rem; }
+    .news-card:not(.featured) .news-card-excerpt {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .news-card-readmore {
+      margin-top: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--green);
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 1px;
+      width: fit-content;
+    }
+
+    .news-divider {
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      margin: 0 auto 80px;
+    }
+
+
+    /* ══════════════════════════════════════════════
+       PÁGINA INDIVIDUAL DA NOTÍCIA (overlay)
+    ══════════════════════════════════════════════ */
+    .article-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: var(--cream);
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .article-overlay.open {
+      transform: translateX(0);
+    }
+
+    .article-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--green);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      padding: 0 48px;
+      gap: 20px;
+    }
+
+    .article-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      padding: 0;
+      transition: color 0.2s;
+    }
+    .article-back-btn:hover { color: var(--gold-light); }
+
+    .article-topbar-sep {
+      width: 1px;
+      height: 20px;
+      background: rgba(255,255,255,0.22);
+    }
+
+    .article-topbar-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 520px;
+    }
+
+    .article-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 64px 32px 120px;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .article-tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: var(--green);
+      color: var(--white);
+      padding: 4px 11px;
+      border-radius: 2px;
+    }
+
+    .article-date {
+      font-size: 0.8rem;
+      color: var(--text-mid);
+    }
+
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.22;
+      margin-bottom: 16px;
+    }
+
+    .article-lead {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.22rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text-mid);
+      border-left: 3px solid var(--gold);
+      padding-left: 20px;
+      margin-bottom: 36px;
+      font-style: italic;
+    }
+
+    .article-cover {
+      width: 100%;
+      aspect-ratio: 16/7;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 40px;
+      display: block;
+      background: linear-gradient(135deg, var(--green-dark), var(--green));
+    }
+
+    .article-cover-placeholder {
+      width: 100%;
+      aspect-ratio: 16/7;
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+      border-radius: 4px;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .article-cover-placeholder svg { opacity: 0.18; width: 80px; height: 80px; }
+
+    .article-content p {
+      font-size: 1rem;
+      line-height: 1.82;
+      color: var(--text-dark);
+      margin-bottom: 22px;
+    }
+
+    .article-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin: 36px 0 14px;
+    }
+
+    .article-content blockquote {
+      border-left: 3px solid var(--gold);
+      padding: 4px 0 4px 20px;
+      margin: 28px 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text-mid);
+    }
+
+    .article-cta {
+      margin-top: 56px;
+      padding: 36px 40px;
+      background: var(--green-dark);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .article-cta-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--white);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .article-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: var(--text-dark);
+      text-decoration: none;
+      padding: 13px 28px;
+      border-radius: 3px;
+      font-size: 0.83rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .article-cta-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    /* ── Responsivo ── */
+    @media (max-width: 900px) {
+      .news-section { padding: 64px 24px 56px; }
+      .news-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      .news-card.featured { grid-row: auto; }
+      .news-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .article-topbar { padding: 0 24px; }
+      .article-body { padding: 48px 24px 80px; }
+      .article-cta { flex-direction: column; }
+    }
+
+    @media (max-width: 600px) {
+      .navbar { padding: 0 20px; }
+      .nav-links { display: none; }
+      .news-section { padding: 48px 18px 48px; }
+      .news-grid { grid-template-columns: 1fr; }
+      .news-card.featured .news-card-img-placeholder { aspect-ratio: 16/9; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAVBAR (placeholder) ══ -->
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">Correia <span>Quintella</span></a>
+  <ul class="nav-links">
+    <li><a href="#">Cidadanias</a></li>
+    <li><a href="#">Vistos</a></li>
+    <li><a href="#">Notícias</a></li>
+    <li><a href="#">Acompanhar processo</a></li>
+  </ul>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════
+     SEÇÃO NOTÍCIAS — cole no index.html
+══════════════════════════════════════════════ -->
+<section class="news-section" id="noticias">
+
+  <div class="news-header">
+    <div>
+      <p class="news-eyebrow">Fique por dentro</p>
+      <h2 class="news-title">Notícias & <em>Atualizações</em></h2>
+    </div>
+    <a href="#noticias" class="news-see-all">
+      Ver todas as notícias
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+
+  <div class="news-grid" id="newsGrid">
+    <!-- Cards gerados pelo JS abaixo -->
+  </div>
+
+</section>
+
+<div class="news-divider"></div>
+
+
+<!-- ══ OVERLAY: PÁGINA INDIVIDUAL DA NOTÍCIA ══ -->
+<div class="article-overlay" id="articleOverlay">
+
+  <div class="article-topbar">
+    <button class="article-back-btn" onclick="closeArticle()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Voltar
+    </button>
+    <div class="article-topbar-sep"></div>
+    <div class="article-topbar-title" id="overlayTopTitle"></div>
+  </div>
+
+  <div class="article-body" id="articleBody">
+    <!-- Conteúdo injetado por JS -->
+  </div>
+
+</div>
+
+
+<script>
+  /* ═══════════════════════════════════════════════════════
+     DADOS — aqui você irá substituir pelo fetch do backend
+     Estrutura esperada da API:
+     GET /api/noticias          → array de { id, tag, date, title, excerpt }
+     GET /api/noticias/:id      → objeto { ...acima, content (HTML), lead }
+  ═══════════════════════════════════════════════════════ */
+  const NOTICIAS = [
+    {
+      id: 1,
+      tag: "Cidadania Italiana",
+      date: "18 jun. 2025",
+      title: "Itália confirma prazo para processos pela via administrativa em 2025",
+      excerpt: "O governo italiano publicou nova portaria regulamentando os prazos dos processos de reconhecimento de cidadania iure sanguinis. Saiba como isso afeta quem ainda está aguardando.",
+      lead: "Famílias que aguardam reconhecimento pela via consular precisarão atentar às novas janelas de atendimento definidas pelo Ministério do Interior italiano.",
+      content: `
+        <p>O Ministério do Interior da Itália publicou, em maio de 2025, a Portaria Ministerial n.º 147 que estabelece novos critérios e prazos para os processos de reconhecimento de cidadania italiana por descendência (iure sanguinis). A medida afeta diretamente brasileiros que aguardam agendamento consular ou que já possuem processo aberto.</p>
+
+        <h3>O que muda na prática?</h3>
+        <p>Processos iniciados até 31 de dezembro de 2024 terão prioridade no sistema de fila consular. Já os novos requerimentos passarão a ser protocolados exclusivamente pela plataforma digital <em>Prenota Online</em>, com datas de entrevista disponíveis a partir do segundo semestre de 2025.</p>
+
+        <blockquote>
+          "A digitalização do processo é positiva, mas exige atenção redobrada à documentação — qualquer inconsistência agora gera recusa automática pelo sistema." — Equipe Correia Quintella
+        </blockquote>
+
+        <h3>Documentação e apostilamento</h3>
+        <p>Certidões de nascimento, casamento e óbito dos ancestrais precisam estar apostiladas de Haia e acompanhadas de tradução juramentada. Documentos italianos anteriores a 1870 devem ser requisitados diretamente aos arquivos municipais (anagrafe) da cidade de origem da família.</p>
+
+        <p>Nossa equipe está monitorando cada atualização das chancelarias italianas e atualizará os clientes em acompanhamento sempre que houver novidade relevante para o processo individual.</p>
+      `
+    },
+    {
+      id: 2,
+      tag: "Cidadania Portuguesa",
+      date: "5 jun. 2025",
+      title: "Portugal amplia elegibilidade para netos de portugueses em 2025",
+      excerpt: "Reforma no Código da Nacionalidade portuguesa abre caminho para descendentes de segunda e terceira geração solicitarem a cidadania com menos restrições.",
+      lead: "A alteração legislativa aprovada pela Assembleia da República facilita o reconhecimento para descendentes que antes enfrentavam barreiras na comprovação do vínculo.",
+      content: `
+        <p>A Assembleia da República de Portugal aprovou, em abril de 2025, emenda ao Código da Nacionalidade (Lei n.º 37/81) que amplia as condições de atribuição da cidadania portuguesa a descendentes de segundo e terceiro grau. A mudança beneficia diretamente brasileiros com avós ou bisavós portugueses.</p>
+
+        <h3>Principais alterações</h3>
+        <p>Antes da reforma, netos de portugueses precisavam comprovar que o pai ou a mãe havia mantido ligação efetiva com Portugal — requisito muitas vezes impossível de documentar. A nova redação elimina esse critério para os nascidos após 1981, bastando provar a linha de descendência direta.</p>
+
+        <p>Para os nascidos antes de 1981, o processo segue a via naturalização, com residência mínima de três anos, ou pela via judicial, caso o requerente comprove laços culturais com o país.</p>
+
+        <h3>Como a Correia Quintella está preparada</h3>
+        <p>Nossa equipe especializada em cidadania portuguesa já iniciou a atualização dos fluxos de análise genealógica para incorporar as novas possibilidades legais. Se você tem dúvidas sobre se a alteração se aplica ao seu caso, agende uma consulta gratuita.</p>
+      `
+    },
+    {
+      id: 3,
+      tag: "Pesquisa Genealógica",
+      date: "22 mai. 2025",
+      title: "Como digitalizar documentos antigos para acelerar o reconhecimento de cidadania",
+      excerpt: "Aprenda quais formatos são aceitos pelos consulados europeus e como garantir que suas certidões digitalizadas tenham validade jurídica no processo.",
+      lead: "A qualidade da digitalização de documentos históricos pode ser determinante para a aprovação ou recusa de um processo de cidadania.",
+      content: `
+        <p>Com a crescente digitalização dos processos consulares europeus, a qualidade e o formato dos documentos enviados eletronicamente passou a ser fator crítico para a aprovação dos processos de cidadania.</p>
+
+        <h3>Padrões técnicos aceitos</h3>
+        <p>A maioria dos consulados italiano, português e espanhol exige arquivos PDF/A com resolução mínima de 300 dpi, tamanho máximo de 10 MB por arquivo e sem compressão que prejudique a leitura de assinaturas e selos cartorários. Fotos tiradas com smartphone raramente atendem esses requisitos.</p>
+
+        <h3>Validade jurídica da cópia digital</h3>
+        <p>No Brasil, a Lei n.º 13.726/2018 reconhece a validade de cópias autenticadas digitalmente por cartório registrado no ICP-Brasil. Para documentos enviados a autoridades estrangeiras, o apostilamento do original físico continua sendo necessário — a cópia digital só substitui o envio postal, não o apostilamento.</p>
+
+        <blockquote>
+          "Documentos com baixa qualidade de digitalização são a principal causa de pedido de retificação nos processos que acompanhamos." — Especialista em Cidadania, Correia Quintella
+        </blockquote>
+
+        <p>Nossa equipe oferece orientação completa sobre como preparar e organizar o dossiê digital. Entre em contato para receber um checklist personalizado para o seu processo.</p>
+      `
+    },
+    {
+      id: 4,
+      tag: "Cidadania Espanhola",
+      date: "10 mai. 2025",
+      title: "Lei da Memória Democrática: prazo para descendentes de exilados espanhóis encerra em breve",
+      excerpt: "Descendentes de espanhóis que sofreram exílio durante a ditadura de Franco têm até o fim de 2025 para solicitar a cidadania espanhola pela via da Memória Democrática.",
+      lead: "Mais de 300 mil brasileiros podem ser elegíveis, mas o prazo se encerra e a documentação exige atenção especial.",
+      content: `
+        <p>A Ley de Memoria Democrática (Lei 20/2022), aprovada pelo governo espanhol, prevê a possibilidade de concessão da nacionalidade espanhola a filhos e netos de espanhóis exilados em razão da Guerra Civil ou da ditadura franquista. O prazo para requerimento, originalmente de dois anos a partir da regulamentação, se encerra no segundo semestre de 2025.</p>
+
+        <h3>Quem pode solicitar</h3>
+        <p>São elegíveis filhos e netos de pessoas que perderam ou tiveram que renunciar à nacionalidade espanhola por razões de exílio político, bem como cônjuges e filhos de brigadistas internacionais que lutaram na Guerra Civil ao lado da República.</p>
+
+        <h3>Documentação necessária</h3>
+        <p>O requerimento deve ser instruído com documentos que comprovem o vínculo de parentesco (certidões de nascimento em linha direta) e, quando possível, documentos históricos que atestem o exílio — registros de entrada em outros países, documentos do Arquivo Histórico Nacional da Espanha ou do Centre de Documentació Histórica.</p>
+
+        <p>A Correia Quintella possui equipe especializada nessa modalidade e já assessorou mais de 80 famílias pelo caminho da Memória Democrática. Consulte-nos antes que o prazo se esgote.</p>
+      `
+    }
+  ];
+
+  /* ═══ RENDER DOS CARDS NA HOMEPAGE ═══ */
+  function renderCards() {
+    const grid = document.getElementById('newsGrid');
+
+    NOTICIAS.forEach((noticia, i) => {
+      const card = document.createElement('a');
+      card.className = 'news-card' + (i === 0 ? ' featured' : '');
+      card.href = '#';
+      card.setAttribute('data-id', noticia.id);
+      card.addEventListener('click', (e) => { e.preventDefault(); openArticle(noticia.id); });
+
+      card.innerHTML = `
+        <div class="news-card-img-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 3H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" fill="#ffffff"/>
+          </svg>
+        </div>
+        <div class="news-card-body">
+          <div class="news-card-meta">
+            <span class="news-card-tag">${noticia.tag}</span>
+            <span class="news-card-date">${noticia.date}</span>
+          </div>
+          <div class="news-card-title">${noticia.title}</div>
+          <div class="news-card-excerpt">${noticia.excerpt}</div>
+          <div class="news-card-readmore">
+            Ler artigo completo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  /* ═══ ABRIR ARTIGO ═══ */
+  function openArticle(id) {
+    const noticia = NOTICIAS.find(n => n.id === id);
+    if (!noticia) return;
+
+    document.getElementById('overlayTopTitle').textContent = noticia.title;
+
+    document.getElementById('articleBody').innerHTML = `
+      <div class="article-meta">
+        <span class="article-tag">${noticia.tag}</span>
+        <span class="article-date">${noticia.date}</span>
+      </div>
+
+      <h1 class="article-title">${noticia.title}</h1>
+
+      <p class="article-lead">${noticia.lead}</p>
+
+      <div class="article-cover-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 3H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" fill="#ffffff"/>
+        </svg>
+      </div>
+
+      <div class="article-content">${noticia.content}</div>
+
+      <div class="article-cta">
+        <div class="article-cta-text">
+          Tem dúvidas sobre como essa notícia<br>afeta o seu processo?
+        </div>
+        <a href="https://wa.me/556130460143" target="_blank" class="article-cta-btn">
+          Falar com um especialista
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    `;
+
+    const overlay = document.getElementById('articleOverlay');
+    overlay.classList.add('open');
+    overlay.scrollTop = 0;
+    document.body.style.overflow = 'hidden';
+  }
+
+  /* ═══ FECHAR ARTIGO ═══ */
+  function closeArticle() {
+    document.getElementById('articleOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  /* Fechar com ESC */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeArticle();
+  });
+
+  /* Init */
+  renderCards();
+</script>
+
+</body>
+</html>
