@@ -22,6 +22,38 @@ body {
   overflow-x: hidden;
 }
 
+
+
+/* ══ HERO DA PÁGINA ══════════════════════════════════ */
+.page-hero {
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 100%);
+  padding: 72px 48px 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.page-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900;
+  color: var(--white); line-height: 1.1; margin-bottom: 16px;
+  position: relative;
+}
+.page-hero h1 em { font-style: italic; color: var(--gold-light); }
+
+.hero-logo {
+    width: 400px; /* ajuste o tamanho conforme necessário */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
 /* ─── TOP HEADER BAR ──────────────────────────────────────── */
 .top-header {
   background: var(--green-dark);
@@ -81,6 +113,8 @@ body {
   padding: 4px 14px;
 }
 
+.nav-logo-text { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1rem; font-weight: 700; }
+.nav-logo-text span { color: var(--gold-light); }
 
 
 .nav-links {
@@ -265,7 +299,7 @@ body {
 
 .hero-eyebrow {
   font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -1007,7 +1041,7 @@ footer::after {
 
 .citizenships-eyebrow {
   font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
+  font-size: 18px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
@@ -1122,14 +1156,6 @@ footer::after {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.cc-tags li::before {
-  content: '';
-  width: 14px;
-  height: 1px;
-  background: var(--gold);
-  flex-shrink: 0;
 }
 
 .cc-arrow {
@@ -1522,7 +1548,7 @@ footer::after {
 
 .cp-section-eyebrow {
   font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
+  font-size: 18px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
@@ -2263,7 +2289,7 @@ footer::after {
    ═══════════════════════════════════════════════════════════ */
 
 .cp-services {
-  padding: 100px 8%;
+  padding: 10px 8% 100px 8%;
   background: var(--cream);
   text-align: center;
 }
@@ -2485,14 +2511,13 @@ footer::after {
   z-index: 1;
 }
 
+
 .vistos-eyebrow {
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
+  font-size: 18px;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 14px;
 }
 
 .vistos-title {
@@ -2673,7 +2698,7 @@ footer::after {
 
 .map-eyebrow {
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.78rem;
+  font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -3136,13 +3161,19 @@ footer::after {
   margin: 0 auto;
 }
 
+.nat-brasileira-card {
+  width: 100%;
+  max-width: 860px;
+  min-height: 280px;
+  aspect-ratio: unset;
+}
+
 .naturalizacao-card {
   display: flex;
   gap: 36px;
   align-items: flex-start;
   background: linear-gradient(135deg, #1a2e1f 0%, #243629 60%, #1e2e22 100%);
   border: 1px solid rgba(201, 168, 76, 0.25);
-  border-left: 4px solid var(--gold);
   border-radius: 14px;
   padding: 36px 40px;
   text-decoration: none;
@@ -3291,7 +3322,7 @@ footer::after {
 
 .testimonials-eyebrow {
   font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
+  font-size: 18px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
