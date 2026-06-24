@@ -2730,7 +2730,7 @@ footer::after {
 /* ═══ SEÇÃO MAPA / LOCALIZAÇÃO ═══════════════════════════════ */
 .map-section {
   background: var(--cream);
-  padding: 96px 48px;
+  padding: 10px 48px 96px 48px;
 }
 
 .map-header {
