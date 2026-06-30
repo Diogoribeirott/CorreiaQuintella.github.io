@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cidadania Canadense – Correia Quintella</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+<body>
+
+<!-- ═══ NAVBAR ══════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  
+   <a href="index.html" class="nav-logo">
+    <img src="correia-quintella-logo.png" alt="Correia Quintella" class="nav-logo-img">
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="noticias.html" onclick="closeMobile()">Notícias</a></li>
+    <li><a href="index.html#cidadania">Cidadanias</a></li>
+    <li><a href="index.html#vistos">Vistos</a></li>
+    <li><a href="index.html#depoimentos">Depoimentos</a></li>
+    <li><a href="login.html" class="nav-cta">Acompanhar processo</a></li>
+  </ul>
+
+  <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#home"          onclick="closeMobile()">Home</a>
+  <a href="noticias.html"  onclick="closeMobile()">Notícias</a>
+  <a href="index.html#cidadania"     onclick="closeMobile()">Cidadanias</a>
+  <a href="index.html#vistos"        onclick="closeMobile()">Vistos</a>
+  <a href="index.html#depoimentos"   onclick="closeMobile()">Depoimentos</a>
+  <a href="index.html#localizacao"   onclick="closeMobile()">Localização</a>
+  <a href="login.php" onclick="closeMobile()">Acompanhar processo</a>
+  <div class="mobile-menu-divider"></div>
+  <a href="https://wa.me/556137020143" target="_blank" class="mobile-cta" onclick="closeMobile()">Fale Conosco</a>
+</div>
+
+<!-- ═══ HERO ════════════════════════════════════════════════ -->
+<section class="cp-hero">
+  <div class="cp-hero-bg">
+    <img src="https://images.unsplash.com/photo-1519832979-6fa011b87667?w=1600&q=85" alt="Canadá" class="cp-hero-flag-img"/>
+    <div class="cp-hero-flag-overlay"></div>
+  </div>
+  <div class="cp-hero-content">
+
+    <a href="index.html#cidadania" class="cp-back">← Todas as cidadanias</a>
+
+    <p class="cp-eyebrow">Assessoria Especializada</p>
+
+    <h1 class="cp-title">Cidadania<br>Canadense</h1>
+
+    <p class="cp-subtitle">
+      Reconhecemos seu direito à cidadania canadense por descendência,
+      inclusive para netos de canadenses com base na nova Lei Bill C-3.
+    </p>
+
+    <div class="cp-hero-stats">
+      <div>
+        <div class="cp-hero-stat-num">Bill C-3</div>
+        <div class="cp-hero-stat-label">Nova lei vigente</div>
+      </div>
+      <div>
+        <div class="cp-hero-stat-num">15+</div>
+        <div class="cp-hero-stat-label">Anos de experiência</div>
+      </div>
+      <div>
+        <div class="cp-hero-stat-num">98%</div>
+        <div class="cp-hero-stat-label">Taxa de aprovação</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══ INTRO + ELEGIBILIDADE ═══════════════════════════════ -->
+<section class="cp-intro">
+
+  <div class="cp-intro-left">
+    <p class="cp-intro-lead">
+      A nova lei canadense abriu as portas da cidadania
+      para netos de canadenses nascidos no exterior.
+    </p>
+    <div class="cp-intro-body">
+      <p>
+        Com a aprovação da <em>Bill C-3</em>, o Canadá derrubou o chamado
+        <em>First-Generation Limit</em> — a regra que impedia a transmissão
+        da cidadania para além da primeira geração nascida no exterior.
+        O efeito é retroativo: se você nasceu antes de 15 de dezembro de 2025
+        e tem avô ou avó canadense, pode ter direito à cidadania.
+      </p>
+      <p>
+        O processo não é uma naturalização nem um pedido de visto: é o
+        reconhecimento de um direito já existente, formalizado por meio
+        do <em>Citizenship Certificate</em> (formulário CIT 0001) emitido
+        pelo IRCC (Immigration, Refugees and Citizenship Canada).
+      </p>
+      <p>
+        Nossa equipe conduz todo o processo documental e a solicitação
+        online perante o IRCC, garantindo organização, segurança e
+        as melhores chances de reconhecimento.
+      </p>
+    </div>
+  </div>
+
+  <div class="cp-intro-right">
+    <div class="cp-elegibility-box">
+      <h3>Quem tem direito?</h3>
+      <ul class="cp-elegibility-list">
+        <li>Netos de canadenses natos ou naturalizados (G1)</li>
+        <li>Nascidos antes de 15 de dezembro de 2025</li>
+        <li>Direito transmitido automaticamente via pai ou mãe (G2)</li>
+        <li>Pai/mãe é cidadão canadense retroativamente desde o nascimento</li>
+        <li>Sem necessidade de residir no Canadá para o reconhecimento</li>
+        <li>Não exige proficiência em inglês ou francês</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ═══ MODALIDADES ═════════════════════════════════════════ -->
+<section class="cp-modalities">
+
+  <p class="cp-section-eyebrow">Como funciona a transmissão</p>
+  <h2 class="cp-section-title">A Linha de Sangue (G1 → G2 → G3)</h2>
+  <p class="cp-section-subtitle">
+    A cidadania canadense por descendência segue uma cadeia geracional
+    direta. Entenda cada elo da sua linha genealógica.
+  </p>
+
+  <div class="cp-modalities-grid">
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-title">G1 — Avô ou Avó Canadense</div>
+      <p class="cp-modality-text">
+        É o ponto de origem da linha. Deve ter nascido no Canadá ou
+        ter se naturalizado canadense. É o ancestral que origina o
+        direito para toda a cadeia geracional subsequente.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-title">G2 — Pai ou Mãe (Filho do Canadense)</div>
+      <p class="cp-modality-text">
+        Com a aprovação da Bill C-3, o filho do canadense nascido
+        no exterior passa a ser considerado cidadão canadense retroativamente
+        desde o nascimento — mesmo que nunca tenha tirado o passaporte
+        canadense ou já tenha falecido.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-title">G3 — Você (o Neto)</div>
+      <p class="cp-modality-text">
+        Herdando o direito diretamente do G2, você pode solicitar o
+        reconhecimento da sua cidadania canadense. Não é naturalização
+        — é o reconhecimento de um status de cidadão que já existe
+        por direito de sangue.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-title">Nascidos após 15/12/2025 — Regra Especial</div>
+      <p class="cp-modality-text">
+        Para filhos seus nascidos fora do Canadá após dezembro de 2025,
+        existe a regra da <em>Conexão Substancial</em>: você precisará
+        acumular ao menos 1.095 dias de residência física no Canadá
+        para garantir a transmissão da cidadania a eles.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-title">Nota de Isenção</div>
+      <p class="cp-modality-text">
+        Diferente da imigração tradicional, o neto de canadense não precisa
+        comprovar proficiência em inglês ou francês, não realiza prova de
+        conhecimentos gerais e não tem requisito de tempo mínimo de moradia
+        prévia para si mesmo.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ PROCESSO PASSO A PASSO ═══════════════════════════════ -->
+<section class="cp-process">
+
+  <p class="cp-section-eyebrow">Como funciona</p>
+  <h2 class="cp-section-title">O processo passo a passo</h2>
+
+  <div class="cp-steps">
+
+    <div class="cp-step">
+      <div class="cp-step-num">01</div>
+      <div class="cp-step-title">Análise de Elegibilidade</div>
+      <p class="cp-step-text">
+        Avaliamos sua linha genealógica (G1, G2, G3)
+        para confirmar o direito e identificar
+        eventuais pontos de atenção.
+      </p>
+    </div>
+
+    <div class="cp-step">
+      <div class="cp-step-num">02</div>
+      <div class="cp-step-title">Levantamento Documental</div>
+      <p class="cp-step-text">
+        Orientamos na coleta das certidões do avô,
+        do pai/mãe e do requerente, com
+        traduções juramentadas quando necessário.
+      </p>
+    </div>
+
+    <div class="cp-step">
+      <div class="cp-step-num">03</div>
+      <div class="cp-step-title">Montagem da Pasta</div>
+      <p class="cp-step-text">
+        Organizamos todos os documentos exigidos
+        pelo IRCC e preenchemos o formulário
+        oficial CIT 0001.
+      </p>
+    </div>
+
+    <div class="cp-step">
+      <div class="cp-step-num">04</div>
+      <div class="cp-step-title">Envio e Acompanhamento</div>
+      <p class="cp-step-text">
+        Protocolamos o pedido online no portal
+        do IRCC e acompanhamos até a emissão
+        do Citizenship Certificate.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ DOCUMENTOS NECESSÁRIOS ══════════════════════════════ -->
+<section class="cp-processing">
+
+  <p class="cp-section-eyebrow">O que você vai precisar</p>
+  <h2 class="cp-section-title">Checklist de Documentos</h2>
+
+  <div class="cp-processing-grid">
+
+    <div class="cp-processing-item">
+      <div class="cp-processing-num">G1</div>
+      <div class="cp-processing-info">
+        <div class="cp-processing-title">Do Avô ou Avó Canadense</div>
+        <p class="cp-processing-text">
+          Certidão de Nascimento original emitida pela província canadense
+          ou Certificado de Cidadania original. É o documento que comprova
+          o ponto de origem da cadeia.
+        </p>
+      </div>
+    </div>
+
+    <div class="cp-processing-item">
+      <div class="cp-processing-num">G2</div>
+      <div class="cp-processing-info">
+        <div class="cp-processing-title">Do Pai ou Mãe (Filho do Canadense)</div>
+        <p class="cp-processing-text">
+          Certidão de Nascimento de Inteiro Teor e cópia autenticada do
+          RG ou passaporte. O vínculo entre G1 e G2 precisa ficar claro
+          na documentação.
+        </p>
+      </div>
+    </div>
+
+    <div class="cp-processing-item">
+      <div class="cp-processing-num">G3</div>
+      <div class="cp-processing-info">
+        <div class="cp-processing-title">Do Requerente (Você)</div>
+        <p class="cp-processing-text">
+          Certidão de Nascimento de Inteiro Teor, duas identidades oficiais
+          com foto (ex: RG e Passaporte Brasileiro) e fotos no padrão
+          exigido pelo IRCC.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cp-processing-note" style="margin-top:32px;padding:18px 24px;background:rgba(201,168,76,0.07);border-left:3px solid var(--gold,#C9A84C);border-radius:6px;font-family:'DM Sans',sans-serif;font-size:14px;color:#aaa;line-height:1.6;">
+    <strong style="color:#C9A84C;">Traduções:</strong> Toda certidão ou documento emitido fora do Canadá ou que não esteja em inglês ou francês precisa obrigatoriamente de Tradução Juramentada acompanhada da declaração do tradutor. Nossa assessoria orienta e indica tradutores credenciados.
+  </div>
+
+</section>
+
+
+<!-- ═══ VANTAGENS ════════════════════════════════════════════ -->
+<section class="cp-benefits">
+
+  <p class="cp-section-eyebrow">Por que vale a pena</p>
+  <h2 class="cp-section-title">Vantagens da Cidadania Canadense</h2>
+
+  <div class="cp-benefits-grid">
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Passaporte canadense com acesso livre a mais de 185 países sem visto</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Direito de residir, trabalhar e estudar no Canadá sem necessidade de visto</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Acesso ao sistema de saúde público canadense (Medicare)</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Acesso à educação pública de alta qualidade no Canadá</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Transmissão da cidadania aos seus filhos, observada a regra de Conexão Substancial</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Ampliação de oportunidades profissionais, acadêmicas e empresariais internacionais</div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ═══ ASSESSORIA COMPLETA ══════════════════════════════════ -->
+<section class="cp-services">
+
+  <p class="cp-section-eyebrow">Nosso trabalho</p>
+  <h2 class="cp-section-title">Assessoria Jurídica e Documental Completa</h2>
+  <p class="cp-section-body">
+    Conduzimos todo o processo com rigor técnico e atenção personalizada,
+    desde a análise de elegibilidade até o recebimento do Citizenship Certificate.
+  </p>
+
+  <div class="cp-services-grid">
+    <div class="cp-service-item">Análise de elegibilidade (G1, G2, G3)</div>
+    <div class="cp-service-item">Levantamento genealógico</div>
+    <div class="cp-service-item">Organização documental completa</div>
+    <div class="cp-service-item">Traduções juramentadas</div>
+    <div class="cp-service-item">Preenchimento do formulário CIT 0001</div>
+    <div class="cp-service-item">Protocolo online no IRCC</div>
+    <div class="cp-service-item">Acompanhamento integral até a conclusão</div>
+    <div class="cp-service-item">Orientação sobre transmissão para filhos</div>
+  </div>
+
+</section>
+
+
+<!-- ═══ CTA ══════════════════════════════════════════════════ -->
+<section class="cp-cta">
+  <h2 class="cp-cta-title">Inicie sua análise de elegibilidade</h2>
+  <p class="cp-cta-sub">Descubra se você tem direito à cidadania canadense pela nova Lei Bill C-3.</p>
+  <a href="https://wa.me/556130460143" target="_blank" class="cp-cta-btn">Fale com um especialista →</a>
+</section>
+
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+<footer id="contato">
+  <div class="footer-grid">
+    <!-- Brand column -->
+    <div class="footer-brand">
+      <div class="brand-name">Correia Quintella</div>
+      <div class="brand-sub">Assessoria & Consultoria de Cidadanias</div>
+      <p>Ajudamos você a descobrir e reconhecer sua herança europeia, com rigor jurídico e pesquisa genealógica especializada.</p>
+      <div class="footer-flags">
+        <img src="https://flagcdn.com/h20/pt.png" width="20" height="10" alt="PT flag" style="vertical-align:middle;border-radius:2px;">
+        <img src="https://flagcdn.com/h20/it.png" width="20" height="10" alt="IT flag" style="vertical-align:middle;border-radius:2px;">
+        <img src="https://flagcdn.com/h20/es.png" width="20" height="10" alt="ES flag" style="vertical-align:middle;border-radius:2px;">
+        <img src="https://flagcdn.com/h20/de.png" width="20" height="10" alt="DE flag" style="vertical-align:middle;border-radius:2px;">
+         <img src="https://flagcdn.com/h20/us.png" width="20" height="10" alt="DE flag" style="vertical-align:middle;border-radius:2px;">  
+      </div>
+    </div>
+
+    <!-- Serviços -->
+    <div class="footer-col">
+      <h4>Cidadanias</h4>
+      <ul>
+        <li><a href="cidadania-italiana.html">Cidadania Italiana</a></li>
+        <li><a href="cidadania-portuguesa.html">Cidadania Portuguesa</a></li>
+        <li><a href="cidadania-espanhola.html">Cidadania Espanhola</a></li>
+        <li><a href="cidadania-alema.html">Cidadania Alemã</a></li>
+        <li><a href="cidadania-austriaca.html">Cidadania Austríaca</a></li>
+        <li><a href="cidadania-tcheca.html">Cidadania Tcheca</a></li>
+        <li><a href="cidadania-suica.html">Cidadania Suíça</a></li>
+        <li><a href="cidadania-polonesa.html">Cidadania Polonesa</a></li>
+        <li><a href="cidadania-francesa.html">Cidadania Francesa</a></li>
+        <li><a href="cidadania-hungara.html">Cidadania Húngara</a></li>
+        <li><a href="#">Pesquisa Genealógica</a></li>
+      </ul>
+    </div>
+
+    <!-- Empresa -->
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#equipe">Quem somos</a></li>
+        <li><a href="#equipe">Nossa equipe</a></li>
+      </ul>
+    </div>
+
+    <!-- Contato -->
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/556137020143" target="_blank">WhatsApp</a></li>
+        <li><a href="mailto:contato@cqcidadania.com.br">contato@cqcidadania.com.br</a></li>
+        <li><a  href="https://wa.me/556137020143" target="_blank">Agendar consulta</a></li>
+        <li><a href="login.html">Acompanhar processo</a></li>
+      
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Correia Quintella Assessoria & Consultoria de Cidadanias. Todos os direitos reservados.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+    </div>
+  </div>
+
+  <div class="footer-gold-line"></div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/556130460143" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+  <div class="wa-icon">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </div>
+  <span class="wa-label">Fale pelo WhatsApp</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

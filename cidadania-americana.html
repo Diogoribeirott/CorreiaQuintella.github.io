@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cidadania Americana – Correia Quintella</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+<body>
+
+<!-- ═══ NAVBAR ══════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+
+   <a href="index.html" class="nav-logo">
+    <img src="correia-quintella-logo.png" alt="Correia Quintella" class="nav-logo-img">
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="noticias.html" onclick="closeMobile()">Notícias</a></li>
+    <li><a href="index.html#cidadania">Cidadanias</a></li>
+    <li><a href="index.html#vistos">Vistos</a></li>
+    <li><a href="index.html#depoimentos">Depoimentos</a></li>
+    <li><a href="login.html" class="nav-cta">Acompanhar processo</a></li>
+  </ul>
+
+  <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#home"          onclick="closeMobile()">Home</a>
+  <a href="noticias.html"  onclick="closeMobile()">Notícias</a>
+  <a href="index.html#cidadania"     onclick="closeMobile()">Cidadanias</a>
+  <a href="index.html#vistos"        onclick="closeMobile()">Vistos</a>
+  <a href="index.html#depoimentos"   onclick="closeMobile()">Depoimentos</a>
+  <a href="index.html#localizacao"   onclick="closeMobile()">Localização</a>
+  <a href="login.php" onclick="closeMobile()">Acompanhar processo</a>
+  <div class="mobile-menu-divider"></div>
+  <a href="https://wa.me/556137020143" target="_blank" class="mobile-cta" onclick="closeMobile()">Fale Conosco</a>
+</div>
+
+
+
+<!-- ═══ HERO ════════════════════════════════════════════════ -->
+<section class="cp-hero">
+  <div class="cp-hero-bg">
+    <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=1600&q=85" alt="" class="cp-hero-flag-img"/>
+    <div class="cp-hero-flag-overlay"></div>
+  </div>
+  <div class="cp-hero-content">
+
+    <a href="index.html#cidadania" class="cp-back">← Todas as cidadanias</a>
+
+    <p class="cp-eyebrow"></span>
+      Assessoria Especializada
+    </p>
+
+    <h1 class="cp-title">Cidadania<br>Americana</h1>
+
+    <p class="cp-subtitle">
+      Reconheça a sua nacionalidade americana com segurança jurídica
+      e análise documental criteriosa em todas as etapas do processo.
+    </p>
+
+    <div class="cp-hero-stats">
+      <div>
+        <div class="cp-hero-stat-num">1.500+</div>
+        <div class="cp-hero-stat-label">Cidadanias reconhecidas</div>
+      </div>
+      <div>
+        <div class="cp-hero-stat-num">13+</div>
+        <div class="cp-hero-stat-label">Anos de experiência</div>
+      </div>
+      <div>
+        <div class="cp-hero-stat-num">99%</div>
+        <div class="cp-hero-stat-label">Taxa de aprovação</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══ INTRO + ELEGIBILIDADE ═══════════════════════════════ -->
+<section class="cp-intro">
+
+  <div class="cp-intro-left">
+    <p class="cp-intro-lead">
+      Uma das cidadanias mais desejadas do mundo —
+      e com regras próprias de transmissão. Analisamos seu caso com o rigor
+      que ele exige.
+    </p>
+    <div class="cp-intro-body">
+      <p>
+        A legislação americana de nacionalidade combina o critério de
+        nascimento em território americano (<em>jus soli</em>) com regras
+        específicas de transmissão por descendência (<em>jus sanguinis</em>),
+        que variaram ao longo das décadas conforme a data de nascimento e o
+        tempo de residência prévia do genitor americano nos Estados Unidos.
+      </p>
+      <p>
+        Por essa razão, cada caso deve ser analisado de forma <em>individualizada</em>,
+        com criteriosa avaliação documental e jurídica, levando em conta as
+        regras vigentes à época do nascimento de cada geração da família.
+      </p>
+      <p>
+        Com a cidadania americana você acessa direitos de residência, trabalho
+        e estudo nos Estados Unidos, além de ampliar significativamente suas
+        oportunidades profissionais, acadêmicas e empresariais no país.
+      </p>
+    </div>
+  </div>
+
+  <div class="cp-intro-right">
+    <div class="cp-elegibility-box">
+      <h3>Quem tem direito?</h3>
+      <ul class="cp-elegibility-list">
+        <li>Nascidos em território dos Estados Unidos (jus soli)</li>
+        <li>Filhos de pai ou mãe americanos nascidos no exterior</li>
+        <li>Netos e demais descendentes com transmissão comprovável</li>
+        <li>Cônjuges e familiares de cidadãos americanos, conforme processo de naturalização</li>
+        <li>Residentes legais permanentes (Green Card) elegíveis à naturalização</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ═══ MODALIDADES ═════════════════════════════════════════ -->
+<section class="cp-modalities">
+
+  <p class="cp-section-eyebrow">Tipos de Reconhecimento</p>
+  <h2 class="cp-section-title">Modalidades de Nacionalidade Americana</h2>
+  <p class="cp-section-subtitle">
+    A lei americana prevê caminhos distintos conforme o local de nascimento
+    e o histórico familiar. Identificamos a via correta com análise
+    cronológica precisa.
+  </p>
+
+  <div class="cp-modalities-grid cp-modalities-grid--4">
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-title">Por Nascimento <span style="font-size:12px;font-family:'DM Sans',sans-serif;font-weight:400;color:var(--text-mid)">(Jus Soli)</span></div>
+      <p class="cp-modality-text">
+        Qualquer pessoa nascida em território americano é automaticamente
+        cidadã americana, independentemente da nacionalidade dos pais,
+        conforme a 14ª Emenda da Constituição.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-title">Por Descendência <span style="font-size:12px;font-family:'DM Sans',sans-serif;font-weight:400;color:var(--text-mid)">(Jus Sanguinis)</span></div>
+      <p class="cp-modality-text">
+        Filhos nascidos no exterior de pai ou mãe americanos podem adquirir
+        a cidadania, desde que cumpridos os requisitos de residência prévia
+        do genitor nos Estados Unidos, conforme a época do nascimento.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-title">Por Naturalização</div>
+      <p class="cp-modality-text">
+        Destinada a residentes legais permanentes (Green Card) que preencham
+        os requisitos legais de tempo de residência, exame de inglês e
+        cultura cívica.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-title">Por Casamento</div>
+      <p class="cp-modality-text">
+        Cônjuges de cidadãos americanos podem requerer a naturalização em
+        prazo reduzido, observados os requisitos de residência conjunta
+        e estabilidade do vínculo matrimonial.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ REGRAS E PERFIS ══════════════════════════════════════ -->
+<section class="cp-processing">
+
+  <p class="cp-section-eyebrow">Perfis Elegíveis</p>
+  <h2 class="cp-section-title">Quem pode requerer</h2>
+
+  <div class="cp-processing-grid">
+
+    <div class="cp-processing-item">
+      <div class="cp-processing-num">01</div>
+      <div class="cp-processing-info">
+        <div class="cp-processing-title">Filhos de Cidadãos Americanos</div>
+        <p class="cp-processing-text">
+          Filhos de pai ou mãe americanos nascidos fora dos Estados Unidos
+          podem adquirir a cidadania, observadas as regras de residência
+          prévia do genitor, que variaram ao longo do tempo.
+        </p>
+      </div>
+    </div>
+
+    <div class="cp-processing-item">
+      <div class="cp-processing-num">02</div>
+      <div class="cp-processing-info">
+        <div class="cp-processing-title">Descendentes de Americanos</div>
+        <p class="cp-processing-text">
+          Netos e demais descendentes podem ter direito ao reconhecimento,
+          desde que seja possível comprovar a continuidade da transmissão
+          da nacionalidade ao longo das gerações.
+        </p>
+      </div>
+    </div>
+
+    <div class="cp-processing-item">
+      <div class="cp-processing-num">03</div>
+      <div class="cp-processing-info">
+        <div class="cp-processing-title">Cônjuges de Cidadãos Americanos</div>
+        <p class="cp-processing-text">
+          Há previsão de naturalização em prazo reduzido para cônjuges de
+          cidadãos americanos, com procedimento específico perante as
+          autoridades de imigração.
+        </p>
+      </div>
+    </div>
+
+    <div class="cp-processing-item">
+      <div class="cp-processing-num">04</div>
+      <div class="cp-processing-info">
+        <div class="cp-processing-title">Residentes Legais Permanentes</div>
+        <p class="cp-processing-text">
+          Portadores de Green Card que atendem aos requisitos legais,
+          incluindo tempo de residência, idioma e exame cívico,
+          podem requerer a naturalização.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ REGRAS ESPECÍFICAS ═══════════════════════════════════ -->
+<section class="cp-process">
+
+  <p class="cp-section-eyebrow">Atenção aos detalhes</p>
+  <h2 class="cp-section-title">Regras específicas relevantes</h2>
+
+  <div class="cp-steps">
+
+    <div class="cp-step">
+      <div class="cp-step-num">01</div>
+      <div class="cp-step-title">Tempo de Residência do Genitor</div>
+      <p class="cp-step-text">
+        A legislação americana exige que o pai ou mãe americano tenha
+        residido nos Estados Unidos por período mínimo determinado antes
+        do nascimento do filho no exterior. O período varia conforme a data.
+      </p>
+    </div>
+
+    <div class="cp-step">
+      <div class="cp-step-num">02</div>
+      <div class="cp-step-title">Estado Civil dos Pais</div>
+      <p class="cp-step-text">
+        Exigências relativas ao estado civil e ao reconhecimento formal
+        de paternidade ou maternidade em casos específicos podem afetar
+        diretamente o direito à transmissão da cidadania.
+      </p>
+    </div>
+
+    <div class="cp-step">
+      <div class="cp-step-num">03</div>
+      <div class="cp-step-title">Alterações Legislativas</div>
+      <p class="cp-step-text">
+        Mudanças na lei de imigração e nacionalidade ao longo das décadas
+        alteraram os requisitos de transmissão. A análise cronológica é
+        fundamental para identificar o direito em cada geração.
+      </p>
+    </div>
+
+    <div class="cp-step">
+      <div class="cp-step-num">04</div>
+      <div class="cp-step-title">Registro Consular de Nascimento</div>
+      <p class="cp-step-text">
+        O registro do nascimento no exterior junto ao consulado americano
+        (CRBA) dentro do prazo correto é etapa essencial para a comprovação
+        formal da cidadania da criança.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ PESQUISA DOCUMENTAL ════════════════════════════════ -->
+<section class="cp-documents">
+
+  <p class="cp-section-eyebrow">Pesquisa Documental</p>
+  <h2 class="cp-section-title">Informações essenciais sobre o antepassado</h2>
+
+  <div class="cp-docs-grid">
+
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+      Nome completo do antepassado americano
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+      Data e local de nascimento nos Estados Unidos
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+      Dados de casamento e óbito do antepassado
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+      Período de residência nos EUA antes do nascimento dos filhos
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+      Comprovantes de viagem, entrada e saída do território americano
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+      Registros civis e consulares brasileiros e americanos
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+      Certidões de todos os elos da cadeia familiar
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+      Apostila de Haia em todos os documentos brasileiros
+    </div>
+    <div class="cp-doc-item">
+      <span class="cp-doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+      Tradução juramentada para o inglês dos documentos em português
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ VANTAGENS ════════════════════════════════════════════ -->
+<section class="cp-benefits">
+
+  <p class="cp-section-eyebrow">Por que vale a pena</p>
+  <h2 class="cp-section-title">Vantagens da Cidadania Americana</h2>
+
+  <div class="cp-benefits-grid">
+
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Direito de residir, trabalhar e estudar em qualquer estado dos Estados Unidos</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Acesso facilitado a vistos e entrada simplificada em diversos países</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Acesso a um dos maiores mercados de trabalho e centros acadêmicos do mundo</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Possibilidade de transmitir a cidadania aos seus descendentes</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Passaporte americano com acesso facilitado a mais de 180 países</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Ampliação de oportunidades acadêmicas, profissionais e empresariais nos EUA</div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ ASSESSORIA COMPLETA ══════════════════════════════════ -->
+<section class="cp-services">
+
+  <p class="cp-section-eyebrow">Nosso trabalho</p>
+  <h2 class="cp-section-title">Assessoria Jurídica e Documental Completa</h2>
+  <p class="cp-section-body">
+    Com atuação técnica, criteriosa e transparente, proporcionamos segurança
+    jurídica e eficiência na condução de processos de nacionalidade americana,
+    permitindo que nossos clientes concretizem seus projetos de vida nos
+    Estados Unidos.
+  </p>
+
+  <div class="cp-services-grid">
+    <div class="cp-service-item">Análise de elegibilidade</div>
+    <div class="cp-service-item">Pesquisa documental e genealógica</div>
+    <div class="cp-service-item">Organização e regularização documental</div>
+    <div class="cp-service-item">Traduções juramentadas e apostilamento</div>
+    <div class="cp-service-item">Protocolo perante consulado ou autoridades americanas</div>
+    <div class="cp-service-item">Acompanhamento integral do processo</div>
+    <div class="cp-service-item">Análise cronológica da legislação aplicável</div>
+    <div class="cp-service-item">Estratégia jurídica personalizada</div>
+    <div class="cp-service-item">Agendamento de CRBA e passaporte americano</div>
+  </div>
+
+</section>
+
+
+<!-- ═══ CTA ══════════════════════════════════════════════════ -->
+<section class="cp-cta">
+  <h2 class="cp-cta-title">Inicie sua análise de elegibilidade</h2>
+  <p class="cp-cta-sub">Cada caso é único. Descubra se você tem direito à cidadania americana.</p>
+  <a href="https://wa.me/556130460143" target="_blank" class="cp-cta-btn">Fale com um especialista →</a>
+</section>
+
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+<footer id="contato">
+  <div class="footer-grid">
+    <!-- Brand column -->
+    <div class="footer-brand">
+      <div class="brand-name">Correia Quintella</div>
+      <div class="brand-sub">Assessoria & Consultoria de Cidadanias</div>
+      <p>Ajudamos você a descobrir e reconhecer sua herança internacional, com rigor jurídico e pesquisa documental especializada.</p>
+      <div class="footer-flags">
+        <img src="https://flagcdn.com/h20/pt.png" width="20" height="10" alt="PT flag" style="vertical-align:middle;border-radius:2px;">
+        <img src="https://flagcdn.com/h20/it.png" width="20" height="10" alt="IT flag" style="vertical-align:middle;border-radius:2px;">
+        <img src="https://flagcdn.com/h20/es.png" width="20" height="10" alt="ES flag" style="vertical-align:middle;border-radius:2px;">
+        <img src="https://flagcdn.com/h20/de.png" width="20" height="10" alt="DE flag" style="vertical-align:middle;border-radius:2px;">
+         <img src="https://flagcdn.com/h20/us.png" width="20" height="10" alt="US flag" style="vertical-align:middle;border-radius:2px;">
+      </div>
+    </div>
+
+    <!-- Serviços -->
+    <div class="footer-col">
+      <h4>Cidadanias</h4>
+      <ul>
+        <li><a href="cidadania-italiana.html">Cidadania Italiana</a></li>
+        <li><a href="cidadania-portuguesa.html">Cidadania Portuguesa</a></li>
+        <li><a href="cidadania-espanhola.html">Cidadania Espanhola</a></li>
+        <li><a href="cidadania-alema.html">Cidadania Alemã</a></li>
+        <li><a href="cidadania-americana.html">Cidadania Americana</a></li>
+        <li><a href="cidadania-austriaca.html">Cidadania Austríaca</a></li>
+        <li><a href="cidadania-tcheca.html">Cidadania Tcheca</a></li>
+        <li><a href="cidadania-suica.html">Cidadania Suíça</a></li>
+        <li><a href="cidadania-polonesa.html">Cidadania Polonesa</a></li>
+        <li><a href="cidadania-francesa.html">Cidadania Francesa</a></li>
+        <li><a href="cidadania-hungara.html">Cidadania Húngara</a></li>
+        <li><a href="#">Pesquisa Genealógica</a></li>
+      </ul>
+    </div>
+
+    <!-- Empresa -->
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#equipe">Quem somos</a></li>
+        <li><a href="#equipe">Nossa equipe</a></li>
+      </ul>
+    </div>
+
+    <!-- Contato -->
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/556137020143" target="_blank">WhatsApp</a></li>
+        <li><a href="mailto:contato@cqcidadania.com.br">contato@cqcidadania.com.br</a></li>
+        <li><a  href="https://wa.me/556137020143" target="_blank">Agendar consulta</a></li>
+        <li><a href="login.html">Acompanhar processo</a></li>
+
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Correia Quintella Assessoria & Consultoria de Cidadanias. Todos os direitos reservados.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+    </div>
+  </div>
+
+  <div class="footer-gold-line"></div>
+</footer>
+
+<!-- ═══ WHATSAPP FLOAT ═══════════════════════════════════════ -->
+<a class="whatsapp-float" href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+  <div class="wa-icon">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </div>
+  <span class="wa-label">Fale pelo WhatsApp</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

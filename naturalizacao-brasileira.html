@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Naturalização Brasileira – Correia Quintella</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+<body>
+
+<!-- ═══ NAVBAR ══════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  
+   <a href="index.html" class="nav-logo">
+    <img src="correia-quintella-logo.png" alt="Correia Quintella" class="nav-logo-img">
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="noticias.html" onclick="closeMobile()">Notícias</a></li>
+    <li><a href="index.html#cidadania">Cidadanias</a></li>
+    <li><a href="index.html#vistos">Vistos</a></li>
+    <li><a href="index.html#depoimentos">Depoimentos</a></li>
+    <li><a href="login.html" class="nav-cta">Acompanhar processo</a></li>
+  </ul>
+
+  <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#home"          onclick="closeMobile()">Home</a>
+  <a href="noticias.html"  onclick="closeMobile()">Notícias</a>
+  <a href="index.html#cidadania"     onclick="closeMobile()">Cidadanias</a>
+  <a href="index.html#vistos"        onclick="closeMobile()">Vistos</a>
+  <a href="index.html#depoimentos"   onclick="closeMobile()">Depoimentos</a>
+  <a href="index.html#localizacao"   onclick="closeMobile()">Localização</a>
+  <a href="login.php" onclick="closeMobile()">Acompanhar processo</a>
+  <div class="mobile-menu-divider"></div>
+  <a href="https://wa.me/556137020143" target="_blank" class="mobile-cta" onclick="closeMobile()">Fale Conosco</a>
+</div>
+
+
+<!-- ═══ HERO ════════════════════════════════════════════════ -->
+<section class="cp-hero">
+  <div class="cp-hero-bg">
+    <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=1600&q=85" alt="Brasil" class="cp-hero-flag-img"/>
+    <div class="cp-hero-flag-overlay"></div>
+  </div>
+  <div class="cp-hero-content">
+
+    <a href="index.html#cidadania" class="cp-back">← Todas as cidadanias</a>
+
+    <p class="cp-eyebrow">Assessoria Especializada</p>
+
+    <h1 class="cp-title">Naturalização<br>Brasileira</h1>
+
+    <p class="cp-subtitle">
+      Assessoria completa para estrangeiros que desejam obter
+      a cidadania brasileira por naturalização — ordinária ou extraordinária.
+    </p>
+
+    <div class="cp-hero-stats">
+      <div>
+        <div class="cp-hero-stat-num">2</div>
+        <div class="cp-hero-stat-label">Modalidades de naturalização</div>
+      </div>
+      <div>
+        <div class="cp-hero-stat-num">15+</div>
+        <div class="cp-hero-stat-label">Anos de experiência</div>
+      </div>
+      <div>
+        <div class="cp-hero-stat-num">98%</div>
+        <div class="cp-hero-stat-label">Taxa de aprovação</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══ INTRO + ELEGIBILIDADE ═══════════════════════════════ -->
+<section class="cp-intro">
+
+  <div class="cp-intro-left">
+    <p class="cp-intro-lead">
+      O Brasil é um dos países mais receptivos do mundo
+      para estrangeiros que desejam se tornar cidadãos.
+    </p>
+    <div class="cp-intro-body">
+      <p>
+        A naturalização brasileira é o processo pelo qual um estrangeiro
+        adquire a cidadania do Brasil mediante requerimento ao Ministério
+        da Justiça e Segurança Pública. Diferente da cidadania por
+        descendência, a naturalização é uma concessão do Estado brasileiro
+        mediante o cumprimento de requisitos legais.
+      </p>
+      <p>
+        Existem duas modalidades principais: a <em>naturalização ordinária</em>,
+        que exige residência contínua por pelo menos 4 anos (ou 1 ano
+        para portadores de origem em países de língua portuguesa), e a
+        <em>naturalização extraordinária</em>, para estrangeiros com mais
+        de 15 anos de residência ininterrupta no Brasil, independentemente
+        de outros requisitos.
+      </p>
+      <p>
+        Nossa equipe assessora em todo o processo: desde a análise
+        de elegibilidade até o protocolo no Ministério da Justiça e
+        acompanhamento do Diário Oficial para a publicação do decreto
+        de naturalização.
+      </p>
+    </div>
+  </div>
+
+  <div class="cp-intro-right">
+    <div class="cp-elegibility-box">
+      <h3>Quem pode se naturalizar?</h3>
+      <ul class="cp-elegibility-list">
+        <li>Estrangeiros residentes no Brasil há pelo menos 4 anos contínuos</li>
+        <li>Originários de países de língua portuguesa: apenas 1 ano de residência</li>
+        <li>Cônjuges ou companheiros de brasileiros sem prazo mínimo de residência</li>
+        <li>Estrangeiros com filhos brasileiros sem prazo mínimo de residência</li>
+        <li>Residentes há mais de 15 anos (naturalização extraordinária)</li>
+        <li>Sem condenação criminal no Brasil ou no exterior</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ═══ MODALIDADES ═════════════════════════════════════════ -->
+<section class="cp-modalities">
+
+  <p class="cp-section-eyebrow">Tipos de Naturalização</p>
+  <h2 class="cp-section-title">Modalidades de Naturalização Brasileira</h2>
+  <p class="cp-section-subtitle">
+    A legislação brasileira prevê diferentes vias de naturalização,
+    cada uma com requisitos e prazos específicos. Identificamos
+    a mais adequada para o seu perfil.
+  </p>
+
+  <div class="cp-modalities-grid">
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-title">Naturalização Ordinária — Prazo Geral</div>
+      <p class="cp-modality-text">
+        Destinada a estrangeiros com residência permanente no Brasil
+        por no mínimo 4 anos contínuos. Exige capacidade civil,
+        registro como residente permanente, comunicação em língua
+        portuguesa e ausência de condenação criminal.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-title">Naturalização Ordinária — Países de Língua Portuguesa</div>
+      <p class="cp-modality-text">
+        Para nacionais de Portugal, Angola, Moçambique, Cabo Verde,
+        São Tomé e Príncipe, Guiné-Bissau, Timor-Leste e Guiné Equatorial,
+        o prazo de residência exigido é reduzido para apenas 1 ano contínuo.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-title">Naturalização por Cônjuge ou Filho Brasileiro</div>
+      <p class="cp-modality-text">
+        Estrangeiros casados ou em união estável com cidadão brasileiro
+        ou que tenham filhos brasileiros podem requerer a naturalização
+        sem prazo mínimo de residência, desde que residam no Brasil
+        e atendam os demais requisitos legais.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-title">Naturalização Extraordinária — 15 Anos</div>
+      <p class="cp-modality-text">
+        Para estrangeiros que residam no Brasil há mais de 15 anos
+        de forma ininterrupta e sem condenação criminal, a naturalização
+        extraordinária é um direito subjetivo: o Estado não pode negar
+        o pedido se os requisitos estiverem cumpridos.
+      </p>
+    </div>
+
+    <div class="cp-modality-card">
+      <div class="cp-modality-title">Naturalização Especial</div>
+      <p class="cp-modality-text">
+        Concedida a estrangeiros que prestaram ou prestam serviços
+        relevantes ao Brasil, que trabalham em organismos internacionais
+        com sede no país, ou que se enquadram em situações específicas
+        previstas na Lei de Migração (Lei nº 13.445/2017).
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ PROCESSO PASSO A PASSO ═══════════════════════════════ -->
+<section class="cp-process">
+
+  <p class="cp-section-eyebrow">Como funciona</p>
+  <h2 class="cp-section-title">O processo passo a passo</h2>
+
+  <div class="cp-steps">
+
+    <div class="cp-step">
+      <div class="cp-step-num">01</div>
+      <div class="cp-step-title">Análise de Elegibilidade</div>
+      <p class="cp-step-text">
+        Verificamos a modalidade mais adequada
+        ao seu perfil: tempo de residência,
+        vínculo familiar ou tempo extraordinário.
+      </p>
+    </div>
+
+    <div class="cp-step">
+      <div class="cp-step-num">02</div>
+      <div class="cp-step-title">Coleta de Documentos</div>
+      <p class="cp-step-text">
+        Orientamos na obtenção de certidões,
+        comprovantes de residência, antecedentes
+        criminais e documentos pessoais.
+      </p>
+    </div>
+
+    <div class="cp-step">
+      <div class="cp-step-num">03</div>
+      <div class="cp-step-title">Montagem da Pasta</div>
+      <p class="cp-step-text">
+        Organizamos e conferimos toda a documentação
+        exigida pelo Ministério da Justiça,
+        com traduções juramentadas quando necessário.
+      </p>
+    </div>
+
+    <div class="cp-step">
+      <div class="cp-step-num">04</div>
+      <div class="cp-step-title">Protocolo e Acompanhamento</div>
+      <p class="cp-step-text">
+        Protocolamos o requerimento e acompanhamos
+        o processo até a publicação do decreto
+        de naturalização no Diário Oficial.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ FORMAS DE PROCESSAMENTO ════════════════════════════ -->
+<section class="cp-processing">
+
+  <p class="cp-section-eyebrow">Onde protocolar</p>
+  <h2 class="cp-section-title">Como é conduzido o processo</h2>
+
+  <div class="cp-processing-grid">
+
+    <div class="cp-processing-item">
+      <div class="cp-processing-num">A</div>
+      <div class="cp-processing-info">
+        <div class="cp-processing-title">Requerimento ao Ministério da Justiça</div>
+        <p class="cp-processing-text">
+          O pedido de naturalização é formalizado perante o Ministério
+          da Justiça e Segurança Pública, por meio do sistema eletrônico
+          do governo federal, com apresentação física de documentos quando exigido.
+        </p>
+      </div>
+    </div>
+
+    <div class="cp-processing-item">
+      <div class="cp-processing-num">B</div>
+      <div class="cp-processing-info">
+        <div class="cp-processing-title">Análise e Entrevista</div>
+        <p class="cp-processing-text">
+          O Ministério pode convocar o requerente para entrevista e
+          verificação de documentos. Na naturalização ordinária,
+          avalia-se também a comunicação em língua portuguesa.
+        </p>
+      </div>
+    </div>
+
+    <div class="cp-processing-item">
+      <div class="cp-processing-num">C</div>
+      <div class="cp-processing-info">
+        <div class="cp-processing-title">Publicação do Decreto e Certificado</div>
+        <p class="cp-processing-text">
+          Após aprovação, o decreto de naturalização é publicado no
+          Diário Oficial da União. Com ele, o naturalizado obtém o
+          Certificado de Naturalização e pode tirar seu documento
+          brasileiro de identidade e passaporte.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ═══ VANTAGENS ════════════════════════════════════════════ -->
+<section class="cp-benefits">
+
+  <p class="cp-section-eyebrow">Por que vale a pena</p>
+  <h2 class="cp-section-title">Vantagens da Cidadania Brasileira</h2>
+
+  <div class="cp-benefits-grid">
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Passaporte brasileiro com acesso a mais de 170 países sem necessidade de visto prévio</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Direito pleno de residir, trabalhar e empreender no Brasil sem restrições migratórias</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Acesso a benefícios sociais, previdência e serviços públicos em igualdade com brasileiros natos</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Possibilidade de votar e ser votado em eleições municipais e estaduais</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Transmissão da cidadania brasileira aos filhos nascidos no Brasil</div>
+    </div>
+    <div class="cp-benefit-item">
+      <div class="cp-benefit-text">Segurança jurídica e estabilidade para estrangeiros com vida construída no Brasil</div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ═══ ASSESSORIA COMPLETA ══════════════════════════════════ -->
+<section class="cp-services">
+
+  <p class="cp-section-eyebrow">Nosso trabalho</p>
+  <h2 class="cp-section-title">Assessoria Jurídica e Documental Completa</h2>
+  <p class="cp-section-body">
+    Atuamos com expertise, atenção personalizada e total transparência
+    em cada etapa do processo de naturalização, do primeiro contato
+    até a obtenção do Certificado de Naturalização.
+  </p>
+
+  <div class="cp-services-grid">
+    <div class="cp-service-item">Análise de elegibilidade e modalidade</div>
+    <div class="cp-service-item">Orientação documental completa</div>
+    <div class="cp-service-item">Traduções e apostilamento</div>
+    <div class="cp-service-item">Regularização de documentos anteriores</div>
+    <div class="cp-service-item">Preenchimento do requerimento oficial</div>
+    <div class="cp-service-item">Protocolo no Ministério da Justiça</div>
+    <div class="cp-service-item">Acompanhamento integral do processo</div>
+    <div class="cp-service-item">Orientação pós-decreto (RG, passaporte)</div>
+  </div>
+
+</section>
+
+
+<!-- ═══ CTA ══════════════════════════════════════════════════ -->
+<section class="cp-cta">
+  <h2 class="cp-cta-title">Inicie sua análise de elegibilidade</h2>
+  <p class="cp-cta-sub">Cada caso é único. Descubra qual modalidade de naturalização é a mais adequada para você.</p>
+  <a href="https://wa.me/556130460143" target="_blank" class="cp-cta-btn">Fale com um especialista →</a>
+</section>
+
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+<footer id="contato">
+  <div class="footer-grid">
+    <!-- Brand column -->
+    <div class="footer-brand">
+      <div class="brand-name">Correia Quintella</div>
+      <div class="brand-sub">Assessoria & Consultoria de Cidadanias</div>
+      <p>Ajudamos você a descobrir e reconhecer sua herança europeia, com rigor jurídico e pesquisa genealógica especializada.</p>
+      <div class="footer-flags">
+        <img src="https://flagcdn.com/h20/pt.png" width="20" height="10" alt="PT flag" style="vertical-align:middle;border-radius:2px;">
+        <img src="https://flagcdn.com/h20/it.png" width="20" height="10" alt="IT flag" style="vertical-align:middle;border-radius:2px;">
+        <img src="https://flagcdn.com/h20/es.png" width="20" height="10" alt="ES flag" style="vertical-align:middle;border-radius:2px;">
+        <img src="https://flagcdn.com/h20/de.png" width="20" height="10" alt="DE flag" style="vertical-align:middle;border-radius:2px;">
+         <img src="https://flagcdn.com/h20/us.png" width="20" height="10" alt="DE flag" style="vertical-align:middle;border-radius:2px;">  
+      </div>
+    </div>
+
+    <!-- Serviços -->
+    <div class="footer-col">
+      <h4>Cidadanias</h4>
+      <ul>
+        <li><a href="cidadania-italiana.html">Cidadania Italiana</a></li>
+        <li><a href="cidadania-portuguesa.html">Cidadania Portuguesa</a></li>
+        <li><a href="cidadania-espanhola.html">Cidadania Espanhola</a></li>
+        <li><a href="cidadania-alema.html">Cidadania Alemã</a></li>
+        <li><a href="cidadania-austriaca.html">Cidadania Austríaca</a></li>
+        <li><a href="cidadania-tcheca.html">Cidadania Tcheca</a></li>
+        <li><a href="cidadania-suica.html">Cidadania Suíça</a></li>
+        <li><a href="cidadania-polonesa.html">Cidadania Polonesa</a></li>
+        <li><a href="cidadania-francesa.html">Cidadania Francesa</a></li>
+        <li><a href="cidadania-hungara.html">Cidadania Húngara</a></li>
+        <li><a href="#">Pesquisa Genealógica</a></li>
+      </ul>
+    </div>
+
+    <!-- Empresa -->
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#equipe">Quem somos</a></li>
+        <li><a href="#equipe">Nossa equipe</a></li>
+      </ul>
+    </div>
+
+    <!-- Contato -->
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/556137020143" target="_blank">WhatsApp</a></li>
+        <li><a href="mailto:contato@cqcidadania.com.br">contato@cqcidadania.com.br</a></li>
+        <li><a  href="https://wa.me/556137020143" target="_blank">Agendar consulta</a></li>
+        <li><a href="login.html">Acompanhar processo</a></li>
+      
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Correia Quintella Assessoria & Consultoria de Cidadanias. Todos os direitos reservados.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+    </div>
+  </div>
+
+  <div class="footer-gold-line"></div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/556130460143" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+  <div class="wa-icon">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </div>
+  <span class="wa-label">Fale pelo WhatsApp</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
