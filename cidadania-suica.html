@@ -6,22 +6,23 @@
   <title>Cidadania Suíça – Correia Quintella</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 </head>
 <body>
 
 <!-- ═══ NAVBAR ══════════════════════════════════════════════ -->
 <nav class="navbar" id="navbar">
-  <a href="#home" class="nav-logo">
-    <span>Correia Quintella</span>
-    <span class=" text-decoration-none">Assessoria & Consultoria de Cidadanias</span>
-    
+  
+   <a href="index.html" class="nav-logo">
+    <img src="correia-quintella-logo.png" alt="Correia Quintella" class="nav-logo-img">
   </a>
 
   <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#cidadania">Cidadanias</a></li>
-    <li><a href="login.html">Acompanhar processo</a></li>
-    <li><a href="https://wa.me/556130460143" class="nav-cta" target="_blank" onclick="closeMobile()">Fale Conosco</a></li>
+    <li><a href="noticias.html" onclick="closeMobile()">Notícias</a></li>
+    <li><a href="index.html#cidadania">Cidadanias</a></li>
+    <li><a href="index.html#vistos">Vistos</a></li>
+    <li><a href="index.html#depoimentos">Depoimentos</a></li>
+    <li><a href="login.html" class="nav-cta">Acompanhar processo</a></li>
   </ul>
 
   <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
@@ -31,10 +32,15 @@
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#home"          onclick="closeMobile()">Home</a>
-  <a href="#cidadania"     onclick="closeMobile()">Cidadanias</a>
+  <a href="index.html#home"          onclick="closeMobile()">Home</a>
+  <a href="noticias.html"  onclick="closeMobile()">Notícias</a>
+  <a href="index.html#cidadania"     onclick="closeMobile()">Cidadanias</a>
+  <a href="index.html#vistos"        onclick="closeMobile()">Vistos</a>
+  <a href="index.html#depoimentos"   onclick="closeMobile()">Depoimentos</a>
+  <a href="index.html#localizacao"   onclick="closeMobile()">Localização</a>
   <a href="login.php" onclick="closeMobile()">Acompanhar processo</a>
-  <a href="https://wa.me/556130460143" target="_blank"  onclick="closeMobile()">Fale Conosco</a>
+  <div class="mobile-menu-divider"></div>
+  <a href="https://wa.me/556137020143" target="_blank" class="mobile-cta" onclick="closeMobile()">Fale Conosco</a>
 </div>
 
 
