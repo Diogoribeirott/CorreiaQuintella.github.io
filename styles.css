@@ -1267,13 +1267,21 @@ footer::after {
   opacity: 1;
 }
 
-/* ── Photo background cards ── */
+/* ── Photo background cards ──
+   Enquanto a imagem não carrega (data-bg ainda presente), mostra um verde sólido
+   como placeholder. Assim que o card entra na viewport, o JS troca --cc-bg e
+   adiciona .cc-bg-loaded, que então exibe a foto real. */
 .cc-photo-card {
-  background: var(--cc-bg) center/cover no-repeat !important;
+  background: var(--green-dark) !important;
   padding: 0 !important;
   min-height: 380px;
   border: none !important;
   box-shadow: 0 12px 40px rgba(0,0,0,0.28) !important;
+  transition: opacity 0.5s ease;
+}
+
+.cc-photo-card.cc-bg-loaded {
+  background: var(--cc-bg) center/cover no-repeat !important;
 }
 
 .cc-photo-overlay {
@@ -1953,13 +1961,13 @@ footer::after {
 }
 
 @media (max-width: 560px) {
-  .whatsapp-float { bottom: 20px; right: 20px; width: 52px; height: 52px; }
+  .whatsapp-float { bottom: 20px; right: 27px; width: 60px; height: 60px; }
   .wa-icon { width: 52px; height: 52px; }
   .wa-icon svg { width: 26px; height: 26px; }
 
   .instagram-float { bottom: 84px; right: 20px; width: 52px; height: 52px; }
   .ig-icon { width: 52px; height: 52px; }
-  .ig-icon svg { width: 24px; height: 24px; }
+  .ig-icon svg { width: 26px; height: 26px; }
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -1968,7 +1976,7 @@ footer::after {
 
 .instagram-float {
   position: fixed;
-  bottom: 96px;
+  bottom: 100px;
   right: 28px;
   z-index: 9999;
   display: flex;
@@ -1999,8 +2007,8 @@ footer::after {
 }
 
 .ig-icon svg {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   fill: #fff;
 }
 
